@@ -1,10 +1,6 @@
-# Playground: Gradle
+# Material3 for Compose HTML
 
-<!-- When using the Playground to bootstrap a project, replace this by your project description. -->
-This a template to easily bootstrap your projects.
-
-> This project is part of the OpenSavvy Playground.
-> To learn more, visit [this page](docs/playground/README.md).
+Blackbox implementation of the [Material3](https://m3.material.io/) specification for [Compose HTML](https://github.com/JetBrains/compose-multiplatform#compose-html) using [TailwindCSS](https://tailwindcss.com/).
 
 ## License
 
