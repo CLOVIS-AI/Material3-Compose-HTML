@@ -4,8 +4,7 @@ Blackbox implementation of the [Material3](https://m3.material.io/) specificatio
 
 ## License
 
-<!-- Mentions under which license you are publishing the project. -->
-<!-- Add the full text to the LICENSE file. -->
+This project is licensed under the [Apache 2.0 license](LICENSE).
 
 ## Contributing
 
