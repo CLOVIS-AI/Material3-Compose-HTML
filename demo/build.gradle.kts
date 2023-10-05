@@ -9,4 +9,10 @@ kotlin {
 
 		binaries.executable()
 	}
+
+	val jsMain by sourceSets.getting {
+		dependencies {
+			implementation(projects.components.actions)
+		}
+	}
 }

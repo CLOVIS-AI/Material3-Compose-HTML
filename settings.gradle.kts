@@ -24,6 +24,8 @@ plugins {
 
 include(
 	"demo",
+
+	"components:actions",
 )
 
 buildCache {
