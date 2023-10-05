@@ -2,6 +2,8 @@ plugins {
 	id("conventions.base")
 	id("conventions.kotlin")
 	id("conventions.library")
+
+	alias(libs.plugins.compose)
 }
 
 kotlin {
@@ -11,7 +13,10 @@ kotlin {
 
 	val jsMain by sourceSets.getting {
 		dependencies {
+			api(compose.runtime)
+			api(compose.html.core)
 
+			api(projects.components.componentUtilities)
 		}
 	}
 }
