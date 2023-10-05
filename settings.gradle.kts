@@ -25,6 +25,7 @@ plugins {
 include(
 	"demo",
 
+	"components:component-utilities",
 	"components:actions",
 )
 
