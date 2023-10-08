@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import kotlinx.browser.window
 import opensavvy.material3.tailwind.actions.buttons.ElevatedButton
 import opensavvy.material3.tailwind.actions.buttons.FilledButton
+import opensavvy.material3.tailwind.actions.buttons.FilledTonalButton
 import opensavvy.material3.tailwind.actions.buttons.TextButton
 
 @Composable
@@ -15,6 +16,11 @@ fun Buttons() {
 
 	FilledButton(
 		"Filled button",
+		action = { window.alert("Clicked") },
+	)
+
+	FilledTonalButton(
+		"Filled tonal button",
 		action = { window.alert("Clicked") },
 	)
 
