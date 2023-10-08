@@ -1,6 +1,7 @@
 [versions]
 kotlin = "1.9.10"
 compose = "1.5.2"
+pedestal = "2.0.0"
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
@@ -8,6 +9,8 @@ compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+
+pedestal-progress = { module = "dev.opensavvy.pedestal:progress", version.ref = "pedestal" }
 
 # To use existing plugins in convention plugins, we must also declare them as libraries
 gradle-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }

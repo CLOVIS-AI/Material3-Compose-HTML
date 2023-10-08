@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import opensavvy.material3.tailwind.ExperimentalComponent
 import opensavvy.material3.tailwind.UnfinishedComponent
+import opensavvy.progress.Progress
+import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope
 import org.jetbrains.compose.web.attributes.disabled
 import org.jetbrains.compose.web.dom.Button
@@ -41,6 +43,7 @@ fun TextButton(
 	label: String,
 	action: () -> Unit,
 	enabled: Boolean = true,
+	progress: Progress = done(),
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
@@ -59,5 +62,8 @@ fun TextButton(
 		icon?.invoke()
 
 		Text(capitalizedLabel)
+
+		if (progress != done())
+			Text("…")
 	}
 }

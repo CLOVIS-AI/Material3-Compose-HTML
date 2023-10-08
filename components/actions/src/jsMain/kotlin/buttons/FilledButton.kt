@@ -3,6 +3,8 @@ package opensavvy.material3.tailwind.actions.buttons
 import androidx.compose.runtime.Composable
 import opensavvy.material3.tailwind.ExperimentalComponent
 import opensavvy.material3.tailwind.UnfinishedComponent
+import opensavvy.progress.Progress
+import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope
 import org.w3c.dom.HTMLButtonElement
 
@@ -29,9 +31,10 @@ fun FilledButton(
 	label: String,
 	action: () -> Unit,
 	enabled: Boolean = true,
+	progress: Progress = done(),
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
 	// For now, it's just an alias for a text button
-	TextButton(label, action, enabled, icon, attrs)
+	TextButton(label, action, enabled, progress, icon, attrs)
 }
