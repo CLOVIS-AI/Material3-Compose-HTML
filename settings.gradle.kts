@@ -25,6 +25,8 @@ plugins {
 include(
 	"demo",
 
+	"tailwindcss",
+
 	"components:component-utilities",
 	"components:actions",
 	"components:communication",

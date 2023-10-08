@@ -53,6 +53,8 @@ fun TextButton(
 		if (!enabled)
 			this.disabled()
 
+		classes("bg-red-700")
+
 		attrs()
 	}) {
 		val capitalizedLabel = remember(label) {

@@ -21,6 +21,9 @@ kotlin {
 	val jsMain by sourceSets.getting {
 		dependencies {
 			implementation(projects.components.actions)
+
+			implementation(devNpm("postcss", libs.versions.postcss.get()))
+			implementation(devNpm("autoprefixer", libs.versions.autoprefixer.get()))
 		}
 	}
 }
