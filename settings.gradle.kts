@@ -27,6 +27,7 @@ include(
 
 	"components:component-utilities",
 	"components:actions",
+	"components:communication",
 )
 
 buildCache {
