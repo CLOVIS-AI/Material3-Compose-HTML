@@ -2,10 +2,12 @@
 kotlin = "1.9.10"
 compose = "1.5.2"
 pedestal = "2.0.0"
+kotlin-vite = "0.2.2"
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+vite = { id = "dev.opensavvy.vite.kotlin", version.ref = "kotlin-vite" }
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }

@@ -3,6 +3,7 @@ plugins {
 	id("conventions.kotlin")
 
 	alias(libs.plugins.compose)
+	alias(libs.plugins.vite)
 }
 
 kotlin {
