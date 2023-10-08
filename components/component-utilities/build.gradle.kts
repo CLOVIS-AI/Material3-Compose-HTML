@@ -17,7 +17,7 @@ kotlin {
 }
 
 library {
-	name.set("Common utilities for all Material3 components")
+	name.set("Material3 Utils")
 	description.set("Common utilities for all Material3 components")
 	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
 }

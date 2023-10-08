@@ -22,7 +22,7 @@ kotlin {
 }
 
 library {
-	name.set("Material3 Action components for Compose HTML")
+	name.set("Material3 Actions")
 	description.set("Action components help people achieve an aim")
 	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
 }
