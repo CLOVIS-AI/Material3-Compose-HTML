@@ -13,9 +13,6 @@ kotlin {
 
 	val jsMain by sourceSets.getting {
 		dependencies {
-			api(compose.runtime)
-			api(compose.html.core)
-
 			api(projects.components.componentUtilities)
 		}
 	}
