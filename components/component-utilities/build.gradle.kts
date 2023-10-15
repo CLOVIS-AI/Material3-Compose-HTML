@@ -8,6 +8,12 @@ kotlin {
 	js(IR) {
 		browser()
 	}
+
+	val jsMain by sourceSets.getting {
+		dependencies {
+			api(libs.pedestal.progress)
+		}
+	}
 }
 
 library {
