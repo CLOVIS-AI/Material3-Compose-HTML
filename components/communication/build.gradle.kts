@@ -13,16 +13,13 @@ kotlin {
 
 	val jsMain by sourceSets.getting {
 		dependencies {
-			api(compose.runtime)
-			api(compose.html.core)
-
-			api(libs.pedestal.progress)
+			api(projects.components.componentUtilities)
 		}
 	}
 }
 
 library {
-	name.set("Material3 Utils")
-	description.set("Common utilities for all Material3 components")
+	name.set("Material3 Communication")
+	description.set("Communication components provide useful information")
 	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
 }
