@@ -2,8 +2,6 @@ plugins {
 	id("conventions.base")
 	id("conventions.kotlin")
 	id("conventions.library")
-
-	alias(libs.plugins.compose)
 }
 
 kotlin {
@@ -13,17 +11,13 @@ kotlin {
 
 	val jsMain by sourceSets.getting {
 		dependencies {
-			api(projects.tailwindcss)
-			api(compose.runtime)
-			api(compose.html.core)
-
-			api(libs.pedestal.progress)
+			api(npm("tailwindcss", libs.versions.tailwindcss.get()))
 		}
 	}
 }
 
 library {
-	name.set("Material3 Utils")
-	description.set("Common utilities for all Material3 components")
+	name.set("TailwindCSS for Kotlin")
+	description.set("Default TailwindCSS configuration for Kotlin")
 	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
 }

@@ -41,12 +41,12 @@ demo:build:
 
   script:
     - >
-      ./gradlew jsBrowserProductionWebpack
+      ./gradlew demo:viteBuild
       -PappVersion=$project_version
 
   after_script:
     - mkdir -p website
-    - mv demo/build/dist/js/productionExecutable/* website
+    - mv demo/build/vite/dist/* website
     - PREFIX="$CI_PROJECT_ROOT_NAMESPACE/"
     - echo "URL=https://$CI_PROJECT_ROOT_NAMESPACE.$CI_PAGES_DOMAIN/-/${CI_PROJECT_PATH//$PREFIX}/-/jobs/$CI_JOB_ID/artifacts/website/index.html" >>deploy.env
 
