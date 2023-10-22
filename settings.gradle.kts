@@ -27,9 +27,7 @@ include(
 
 	"tailwindcss",
 
-	"components:component-utilities",
-	"components:actions",
-	"components:communication",
+	"components",
 )
 
 buildCache {
