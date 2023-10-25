@@ -4,10 +4,7 @@ import androidx.compose.runtime.*
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import opensavvy.material3.tailwind.actions.chips.AssistChip
-import opensavvy.material3.tailwind.actions.chips.FilterChip
-import opensavvy.material3.tailwind.actions.chips.InputChip
-import opensavvy.material3.tailwind.actions.chips.SuggestionChip
+import opensavvy.material3.tailwind.actions.chips.*
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading
@@ -31,37 +28,39 @@ fun Chips() {
 	var filterActive by remember { mutableStateOf(true) }
 	var inputVisible by remember { mutableStateOf(true) }
 
-	AssistChip(
-		"AssistChip",
-		onClick = { action() },
-		progress = progress,
-	)
-
-	FilterChip(
-		"FilterChip",
-		filterActive,
-		onToggle = { filterActive = it },
-		progress = progress,
-	)
-
-	if (inputVisible) {
-		InputChip(
-			"InputChip",
+	ChipGroup {
+		AssistChip(
+			"AssistChip",
 			onClick = { action() },
-			onRemove = {
-				scope.launch {
-					inputVisible = false
-					delay(1000)
-					inputVisible = true
-				}
-			},
+			progress = progress,
+		)
+
+		FilterChip(
+			"FilterChip",
+			filterActive,
+			onToggle = { filterActive = it },
+			progress = progress,
+		)
+
+		if (inputVisible) {
+			InputChip(
+				"InputChip",
+				onClick = { action() },
+				onRemove = {
+					scope.launch {
+						inputVisible = false
+						delay(1000)
+						inputVisible = true
+					}
+				},
+				progress = progress,
+			)
+		}
+
+		SuggestionChip(
+			"SuggestionChip",
+			onClick = { action() },
 			progress = progress,
 		)
 	}
-
-	SuggestionChip(
-		"SuggestionChip",
-		onClick = { action() },
-		progress = progress,
-	)
 }
