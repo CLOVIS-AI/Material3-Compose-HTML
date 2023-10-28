@@ -6,25 +6,14 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import opensavvy.material3.tailwind.actions.chips.*
 import opensavvy.material3.tailwind.demo.utils.Section
-import opensavvy.progress.Progress
-import opensavvy.progress.done
-import opensavvy.progress.loading
+import opensavvy.material3.tailwind.demo.utils.named
+import opensavvy.material3.tailwind.demo.utils.progress
+import opensavvy.material3.tailwind.demo.utils.rememberParameters
 
 @Composable
 fun Chips() = Section("Chips") {
+	val parameters = rememberParameters()
 	val scope = rememberCoroutineScope()
-	var progress: Progress by remember { mutableStateOf(done()) }
-
-	fun action() {
-		scope.launch {
-			repeat(30) {
-				progress = loading(1.0 / 30 * it)
-				delay(50 * 60 / 30)
-			}
-			progress = done()
-			window.alert("Clicked")
-		}
-	}
 
 	var filterActive by remember { mutableStateOf(true) }
 	var inputVisible by remember { mutableStateOf(true) }
@@ -32,21 +21,25 @@ fun Chips() = Section("Chips") {
 	ChipGroup {
 		AssistChip(
 			"AssistChip",
-			onClick = { action() },
-			progress = progress,
+			onClick = { window.alert("Clocked") },
+			enabled = parameters.named("Enabled", true),
+			contrasted = parameters.named("Contrasted", false),
+			progress = parameters.progress(),
 		)
 
 		FilterChip(
 			"FilterChip",
 			filterActive,
 			onToggle = { filterActive = it },
-			progress = progress,
+			enabled = parameters.named("Enabled", true),
+			contrasted = parameters.named("Contrasted", false),
+			progress = parameters.progress(),
 		)
 
 		if (inputVisible) {
 			InputChip(
 				"InputChip",
-				onClick = { action() },
+				onClick = { window.alert("Clicked") },
 				onRemove = {
 					scope.launch {
 						inputVisible = false
@@ -54,14 +47,20 @@ fun Chips() = Section("Chips") {
 						inputVisible = true
 					}
 				},
-				progress = progress,
+				enabled = parameters.named("Enabled", true),
+				contrasted = parameters.named("Contrasted", false),
+				progress = parameters.progress(),
 			)
 		}
 
 		SuggestionChip(
 			"SuggestionChip",
-			onClick = { action() },
-			progress = progress,
+			onClick = { window.alert("Clicked") },
+			enabled = parameters.named("Enabled", true),
+			contrasted = parameters.named("Contrasted", false),
+			progress = parameters.progress(),
 		)
 	}
+
+	parameters.draw()
 }
