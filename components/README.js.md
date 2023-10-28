@@ -19,6 +19,9 @@ Buttons are categorized by their importance:
 Sometimes, we need other specific button types:
 - [ElevatedButton][opensavvy.material3.tailwind.actions.buttons.ElevatedButton] is used on top of patterned backgrounds, where a regular button would be too hard to read.
 
+Other useful components:
+- [ButtonGroup][opensavvy.material3.tailwind.actions.buttons.ButtonGroup] is a simple horizontal layout to correctly space multiple buttons acting in a single group.
+
 # Package opensavvy.material3.tailwind.actions.chips
 
 Reactive and contextual actions, impacting either the current screen or another app entirely.

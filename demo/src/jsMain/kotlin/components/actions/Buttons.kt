@@ -12,40 +12,42 @@ import opensavvy.material3.tailwind.demo.utils.rememberParameters
 fun Buttons() = Section("Buttons") {
 	val parameters = rememberParameters()
 
-	ElevatedButton(
-		"Elevated button",
-		action = { window.alert("Clicked") },
-		enabled = parameters.named("Enabled", true),
-		progress = parameters.progress(),
-	)
+	ButtonGroup {
+		ElevatedButton(
+			"Elevated button",
+			action = { window.alert("Clicked") },
+			enabled = parameters.named("Enabled", true),
+			progress = parameters.progress(),
+		)
 
-	FilledButton(
-		"Filled button",
-		action = { window.alert("Clicked") },
-		enabled = parameters.named("Enabled", true),
-		progress = parameters.progress(),
-	)
+		FilledButton(
+			"Filled button",
+			action = { window.alert("Clicked") },
+			enabled = parameters.named("Enabled", true),
+			progress = parameters.progress(),
+		)
 
-	FilledTonalButton(
-		"Filled tonal button",
-		action = { window.alert("Clicked") },
-		enabled = parameters.named("Enabled", true),
-		progress = parameters.progress(),
-	)
+		FilledTonalButton(
+			"Filled tonal button",
+			action = { window.alert("Clicked") },
+			enabled = parameters.named("Enabled", true),
+			progress = parameters.progress(),
+		)
 
-	OutlinedButton(
-		"Outlined button",
-		action = { window.alert("Clicked") },
-		enabled = parameters.named("Enabled", true),
-		progress = parameters.progress(),
-	)
+		OutlinedButton(
+			"Outlined button",
+			action = { window.alert("Clicked") },
+			enabled = parameters.named("Enabled", true),
+			progress = parameters.progress(),
+		)
 
-	TextButton(
-		"Text button",
-		action = { window.alert("Clicked") },
-		enabled = parameters.named("Enabled", true),
-		progress = parameters.progress(),
- 	)
+		TextButton(
+			"Text button",
+			action = { window.alert("Clicked") },
+			enabled = parameters.named("Enabled", true),
+			progress = parameters.progress(),
+		)
+	}
 
 	parameters.draw()
 }
