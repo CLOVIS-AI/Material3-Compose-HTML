@@ -5,12 +5,13 @@ import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import opensavvy.material3.tailwind.actions.buttons.*
+import opensavvy.material3.tailwind.demo.utils.Section
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading
 
 @Composable
-fun Buttons() {
+fun Buttons() = Section("Buttons") {
 	val scope = rememberCoroutineScope()
 	var progress: Progress by remember { mutableStateOf(done()) }
 

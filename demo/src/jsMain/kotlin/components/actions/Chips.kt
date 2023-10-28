@@ -5,12 +5,13 @@ import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import opensavvy.material3.tailwind.actions.chips.*
+import opensavvy.material3.tailwind.demo.utils.Section
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading
 
 @Composable
-fun Chips() {
+fun Chips() = Section("Chips") {
 	val scope = rememberCoroutineScope()
 	var progress: Progress by remember { mutableStateOf(done()) }
 
