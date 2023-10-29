@@ -208,10 +208,12 @@ pages:
   needs:
     - job: dokka
       artifacts: true
+    - job: demo:build
 
   script:
     - mkdir -p public
     - mv api-docs public
+    - mv website public/demo
 
   artifacts:
     paths:
