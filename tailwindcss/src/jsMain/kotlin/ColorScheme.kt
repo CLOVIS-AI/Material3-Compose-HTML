@@ -9,9 +9,11 @@ import org.w3c.dom.MediaQueryList
 import org.w3c.dom.events.EventListener
 
 /**
- * Initializes the Material3 color theme.
+ * Configures all components inside [content] to use the [scheme] provided by the user.
  *
- * All components used inside [content] will respect the selected [scheme].
+ * In Material3, all colors are based on a palette, which defines three primary colors, an error color, and two
+ * neutral colors.
+ * The light and dark schemes are created by using different tones of the colors specified by the palette.
  */
 @Composable
 fun InstallColorScheme(
