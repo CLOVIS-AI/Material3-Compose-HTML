@@ -13,7 +13,7 @@ fun Section(
 
 }) {
 	P({
-		classes("text-4xl", "text-extrabold", "mt-4", "mb-2")
+		classes("text-4xl", "text-extrabold", "pt-4", "mb-2")
 	}) {
 		Text(title)
 	}
