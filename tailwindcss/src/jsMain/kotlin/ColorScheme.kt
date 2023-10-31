@@ -27,6 +27,16 @@ fun InstallColorScheme(
 	}
 
 	Div({
+		classes(
+			"bg-surface",
+			"text-surface-on",
+			"decoration-primary",
+			"accent-primary",
+			"outline-outline",
+			"delay-100",
+			"transition-colors",
+		)
+
 		style {
 			fun aliasVariable(name: String, light: String, dark: String) {
 				variable("--md-token-$name", "var(--md-ref-palette-${if (isDark) dark else light})")
