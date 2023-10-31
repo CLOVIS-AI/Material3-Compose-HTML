@@ -8,6 +8,7 @@ import opensavvy.material3.css.ColorScheme
 import opensavvy.material3.css.InstallColorScheme
 import opensavvy.material3.tailwind.demo.components.actions.Buttons
 import opensavvy.material3.tailwind.demo.components.actions.Chips
+import opensavvy.material3.tailwind.demo.components.communication.LoadingIndicators
 import opensavvy.material3.tailwind.demo.utils.SchemeSelector
 import org.jetbrains.compose.web.renderComposable
 
@@ -19,6 +20,7 @@ fun main() {
 			SchemeSelector(scheme, onSelect = { scheme = it })
 			Buttons()
 			Chips()
+			LoadingIndicators()
 		}
 	}
 }
