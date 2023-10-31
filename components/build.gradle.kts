@@ -16,6 +16,7 @@ kotlin {
 			api(projects.tailwindcss)
 			api(compose.runtime)
 			api(compose.html.core)
+			implementation(compose.html.svg)
 
 			api(libs.pedestal.progress)
 		}
