@@ -15,9 +15,8 @@ fun main() {
 	renderComposable(rootElementId = "root") {
 		var scheme by remember { mutableStateOf(ColorScheme.System) }
 
-		SchemeSelector(scheme, onSelect = { scheme = it })
-
 		InstallColorScheme(scheme) {
+			SchemeSelector(scheme, onSelect = { scheme = it })
 			Buttons()
 			Chips()
 		}
