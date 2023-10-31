@@ -21,8 +21,9 @@ import org.jetbrains.compose.web.dom.Text
 @ExperimentalComponent
 @UnfinishedComponent
 @Composable
-fun LinearProgressIndicator(progress: Progress.Loading) {
+fun LinearProgressIndicator(progress: Progress) {
 	when (progress) {
+		is Progress.Done -> { /* Nothing to display */ }
 		is Progress.Loading.Unquantified -> Text("Loading…")
 		is Progress.Loading.Quantified -> Text("Loading ${progress.percent}%…")
 	}
