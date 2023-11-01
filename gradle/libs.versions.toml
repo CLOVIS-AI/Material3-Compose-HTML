@@ -4,7 +4,7 @@
 [versions]
 compose = "1.5.2"
 pedestal = "2.0.0"
-kotlin-vite = "0.2.2"
+kotlin-vite = "0.3.2"
 
 # CSS
 tailwindcss = "3.3.3"
