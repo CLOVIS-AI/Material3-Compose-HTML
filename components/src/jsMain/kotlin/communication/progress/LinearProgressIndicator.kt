@@ -40,8 +40,7 @@ fun LinearProgressIndicator(progress: Progress) = Svg("0 0 100 10", {
 }) {
 	// Track
 	Line(0, 5, 100, 5, attrs = {
-		attr("stroke-width", "10")
-		classes("stroke-surface-container-highest")
+		classes("stroke-surface-container-highest", "stroke-[10px]")
 	})
 
 	// Active indicator
