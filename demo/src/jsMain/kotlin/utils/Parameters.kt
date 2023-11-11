@@ -73,7 +73,7 @@ private class Parameter<T: Any>(
 	@Suppress("UNCHECKED_CAST")
 	@Composable
 	fun draw() = Label(attrs = {
-		classes("block")
+		classes("flex", "gap-1.5")
 	}) {
 		Text("$name: ")
 
