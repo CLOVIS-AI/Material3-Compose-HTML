@@ -4,7 +4,9 @@ import androidx.compose.runtime.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import opensavvy.material3.tailwind.actions.buttons.TextButton
+import opensavvy.material3.tailwind.actions.chips.AssistChip
+import opensavvy.material3.tailwind.actions.chips.ChipGroup
+import opensavvy.material3.tailwind.actions.chips.FilterChip
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading
@@ -87,17 +89,20 @@ private class Parameter<T: Any>(
 			}
 			Progress::class -> {
 				Text(state.toString())
-				TextButton("Set to done", action = { state = done() as T })
-				TextButton("Set to 33%", action = { state = loading(0.33) as T })
-				TextButton("Launch", action = {
-					scope.launch {
-						repeat(100) {
-							state = loading(0.01 * it) as T
-							delay(50)
+				ChipGroup {
+					AssistChip("Done", onClick = { state = done() as T })
+					AssistChip("Indeterminate", onClick = { state = loading() as T })
+					AssistChip("33%", onClick = { state = loading(0.33) as T })
+					AssistChip("Launch", onClick = {
+						scope.launch {
+							repeat(100) {
+								state = loading(0.01 * it) as T
+								delay(50)
+							}
+							state = done() as T
 						}
-						state = done() as T
-					}
-				})
+					})
+				}
 			}
 			else -> Text("Unsupported parameter type: $type")
 		}
