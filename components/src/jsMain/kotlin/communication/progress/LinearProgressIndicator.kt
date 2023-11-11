@@ -91,10 +91,11 @@ fun LinearProgressIndicator(progress: Progress) = Svg("0 0 100 10", {
 
 	// Active indicator
 	Line(0, 5, 100, 5, attrs = {
-		classes("stroke-primary", "stroke-[10px]", "transition-all", "duration-1000", "ease-in-out")
+		classes("stroke-primary", "translate-x-[--start-pos]", "scale-x-[--end-pos]", "stroke-[10px]", "transition-all", "duration-1000", "ease-in-out")
 
 		style {
-			property("transform", "translateX(${(startPos * 100).toInt()}%) scaleX($endPos)")
+			variable("--start-pos", "${(startPos * 100).toInt()}%")
+			variable("--end-pos", endPos)
 		}
 	})
 }
