@@ -7,11 +7,13 @@ import kotlinx.coroutines.launch
 import opensavvy.material3.tailwind.actions.chips.AssistChip
 import opensavvy.material3.tailwind.actions.chips.ChipGroup
 import opensavvy.material3.tailwind.actions.chips.FilterChip
+import opensavvy.material3.tailwind.actions.fab.FloatingActionButtonSize
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.dom.*
+import kotlin.enums.EnumEntries
 import kotlin.reflect.KClass
 
 class Parameters(
@@ -104,7 +106,18 @@ private class Parameter<T: Any>(
 					})
 				}
 			}
+			FloatingActionButtonSize::class -> drawEnum(FloatingActionButtonSize.entries)
 			else -> Text("Unsupported parameter type: $type")
+		}
+	}
+
+	@Suppress("UNCHECKED_CAST")
+	@Composable
+	private fun drawEnum(entries: EnumEntries<*>) {
+		ChipGroup {
+			for (entry in entries) {
+				FilterChip(entry.name, entry == state, onToggle = { state = entry as T })
+			}
 		}
 	}
 }
