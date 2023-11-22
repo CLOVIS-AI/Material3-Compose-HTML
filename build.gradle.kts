@@ -14,11 +14,20 @@ plugins {
 	// Some plugins *must* be configured on the root project.
 	// In these cases, we explicitly tell Gradle not to apply them.
 	alias(opensavvyConventions.plugins.aligned.kotlin) apply false
+	alias(opensavvyConventions.plugins.aligned.composeMultiplatform) apply false
 }
 
 dependencies {
 	// List the 'library' projects
-	dokkatoo(projects.core)
+	dokkatoo(projects.components)
+	dokkatoo(projects.tailwindcss)
+
+	// This is required at the moment, see https://github.com/adamko-dev/dokkatoo/issues/14
+	dokkatooPluginHtml(
+		dokkatoo.versions.jetbrainsDokka.map { dokkaVersion ->
+			"org.jetbrains.dokka:all-modules-page-plugin:$dokkaVersion"
+		}
+	)
 }
 
 // region Check the users of the project didn't forget to rename the group
