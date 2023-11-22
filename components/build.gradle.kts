@@ -1,9 +1,6 @@
 plugins {
-	id("conventions.base")
-	id("conventions.kotlin")
-	id("conventions.library")
-
-	alias(libs.plugins.compose)
+	alias(opensavvyConventions.plugins.kotlin.library)
+	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
 }
 
 kotlin {
@@ -27,4 +24,9 @@ library {
 	name.set("Material3 Components")
 	description.set("Implementation of the Material3 UI components")
 	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
+
+	license.set {
+		name.set("Apache 2.0")
+		url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+	}
 }

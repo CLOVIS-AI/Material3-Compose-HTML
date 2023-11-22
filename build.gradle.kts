@@ -8,15 +8,13 @@
  */
 
 plugins {
-	id("conventions.base")
-	id("conventions.root")
+	alias(opensavvyConventions.plugins.base)
+	alias(opensavvyConventions.plugins.root)
 
 	// Some plugins *must* be configured on the root project.
 	// In these cases, we explicitly tell Gradle not to apply them.
-	alias(playgroundLibs.plugins.kotlin) apply false
-	alias(libs.plugins.compose) apply false
-
-	alias(playgroundLibs.plugins.dokkatoo)
+	alias(opensavvyConventions.plugins.aligned.kotlin) apply false
+	alias(opensavvyConventions.plugins.aligned.composeMultiplatform) apply false
 }
 
 dependencies {
@@ -31,3 +29,12 @@ dependencies {
 		}
 	)
 }
+
+// region Check the users of the project didn't forget to rename the group
+
+val projectPath: String? = System.getenv("CI_PROJECT_PATH")
+if (projectPath != null && projectPath != "opensavvy/playgrounds/gradle" && group == "dev.opensavvy.playground") {
+	error("The project is declared to be in the group '$group', which is recognized as the Gradle Playground, but it's hosted in '$projectPath', which is not the Playground. Maybe you forgot to rename the group when importing the Playground in your own project?")
+}
+
+// endregion
