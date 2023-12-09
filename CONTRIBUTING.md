@@ -73,5 +73,31 @@ These labels should only be applied to issues, not merge requests.
 
 </details>
 
-<!-- **Labels specific to this project** -->
-<!-- Use the same format to document all labels used by this project. -->
+**Labels specific to this project**
+
+<details open>
+<summary>Issue type</summary>
+
+- ~api: Create or modify the API of a component
+- ~design: Modify the visual appearance of a component
+- ~accessibility: Changes related to accessibility
+
+</details>
+<details>
+<summary>Component categories</summary>
+
+- ~components:actions: Help people achieve an aim
+- ~components:communication: Provide helpful information
+- ~components:containment: Hold information and actions
+- ~components:navigation: Help people move through the UI
+- ~components:selection: Specify choices
+- ~components:inputs: Enter and edit data
+
+</details>
+<details>
+<summary>Design tokens</summary>
+
+- ~tokens:colors: Colors and themes
+- ~tokens:icons: Available icons and iconography
+
+</details>
