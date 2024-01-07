@@ -22,13 +22,14 @@ pluginManagement {
 }
 
 plugins {
-	id("dev.opensavvy.conventions.settings") version "0.3.0"
+	id("dev.opensavvy.conventions.settings") version "0.3.4"
 }
 
 include(
+	"gradle:templates:template-app",
+	"gradle:templates:template-lib",
+
 	"demo",
-
 	"tailwindcss",
-
 	"components",
 )

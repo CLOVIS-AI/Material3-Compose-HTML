@@ -2,12 +2,12 @@
 
 [versions]
 compose = "1.5.2"
-pedestal = "2.0.0"
+pedestal = "2.1.0"
 kotlin-vite = "0.3.2"
 
 # CSS
-tailwindcss = "3.3.3"
-postcss = "8.4.31"
+tailwindcss = "3.4.0"
+postcss = "8.4.33"
 autoprefixer = "10.4.16"
 
 [plugins]
