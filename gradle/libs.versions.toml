@@ -2,7 +2,7 @@
 
 [versions]
 compose = "1.5.2"
-pedestal = "2.0.0"
+pedestal = "2.1.0"
 kotlin-vite = "0.3.2"
 
 # CSS
