@@ -63,16 +63,27 @@
 
 		/* neutral */
 		--md-ref-palette-neutral0: 0 0 0;
+		--md-ref-palette-neutral4: 15 13 19;
+		--md-ref-palette-neutral6: 20 18 24;
 		--md-ref-palette-neutral10: 28 27 31;
+		--md-ref-palette-neutral12: 33 31 38;
+		--md-ref-palette-neutral17: 43 41 48;
 		--md-ref-palette-neutral20: 49 48 51;
+		--md-ref-palette-neutral22: 54 52 59;
+		--md-ref-palette-neutral24: 59 56 62;
 		--md-ref-palette-neutral30: 72 70 73;
 		--md-ref-palette-neutral40: 96 93 98;
 		--md-ref-palette-neutral50: 120 117 121;
 		--md-ref-palette-neutral60: 147 144 148;
 		--md-ref-palette-neutral70: 174 170 174;
 		--md-ref-palette-neutral80: 201 197 202;
+		--md-ref-palette-neutral87: 222 216 225;
 		--md-ref-palette-neutral90: 230 225 229;
+		--md-ref-palette-neutral92: 236 230 240;
+		--md-ref-palette-neutral94: 243 237 247;
 		--md-ref-palette-neutral95: 244 239 244;
+		--md-ref-palette-neutral96: 247 242 250;
+		--md-ref-palette-neutral98: 254 247 255;
 		--md-ref-palette-neutral99: 255 251 254;
 		--md-ref-palette-neutral100: 255 255 255;
 
