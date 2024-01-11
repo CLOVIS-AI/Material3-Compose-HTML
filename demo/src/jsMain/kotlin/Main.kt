@@ -10,6 +10,7 @@ import opensavvy.material3.tailwind.demo.components.actions.Buttons
 import opensavvy.material3.tailwind.demo.components.actions.Chips
 import opensavvy.material3.tailwind.demo.components.actions.FloatingActionButtons
 import opensavvy.material3.tailwind.demo.components.communication.LoadingIndicators
+import opensavvy.material3.tailwind.demo.components.containment.Cards
 import opensavvy.material3.tailwind.demo.utils.SchemeSelector
 import org.jetbrains.compose.web.renderComposable
 
@@ -23,6 +24,7 @@ fun main() {
 			FloatingActionButtons()
 			Chips()
 			LoadingIndicators()
+			Cards()
 		}
 	}
 }

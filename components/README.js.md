@@ -46,3 +46,7 @@ Floating Action Buttons (FABs) are large buttons that let the user trigger the m
 # Package opensavvy.material3.tailwind.communication.progress
 
 Indicators to communicate the progress of an ongoing operation to the user.
+
+# Package opensavvy.material3.tailwind.containment.card
+
+Group related information into a cohesive unit.
