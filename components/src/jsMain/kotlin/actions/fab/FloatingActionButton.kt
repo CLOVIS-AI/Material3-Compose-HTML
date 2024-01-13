@@ -8,6 +8,7 @@ import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope
 import org.jetbrains.compose.web.dom.Button
+import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLButtonElement
 
 /**
@@ -24,6 +25,15 @@ import org.w3c.dom.HTMLButtonElement
  *
  * FABs are not needed on every screen.
  * If the primary action is already clear, do not add one.
+ *
+ * ### Extended FAB
+ *
+ * The extended floating action button is a variant of the FAB, which has a [label] in addition to the icon.
+ * It is recommended to use for the single most useful action on a screen.
+ *
+ * This component automatically switches to the extended variant if [label] is provided.
+ * You can also use [showLabel] and [showIcon] to more easily control which components are displayed.
+ * Avoid the extended variants with sizes other than [Regular][FloatingActionButtonSize.Regular].
  *
  * ### Action
  *
@@ -61,8 +71,11 @@ import org.w3c.dom.HTMLButtonElement
 @Composable
 fun FloatingActionButton(
 	action: () -> Unit,
+	label: String? = null,
 	tooltip: String? = null,
 	progress: Progress = done(),
+	showLabel: Boolean = true,
+	showIcon: Boolean = true,
 	theme: FloatingActionButtonTheme = FloatingActionButtonTheme.PrimaryColor,
 	size: FloatingActionButtonSize = FloatingActionButtonSize.Regular,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
@@ -89,8 +102,11 @@ fun FloatingActionButton(
 	}) {
 		if (progress != done()) {
 			CircularProgressIndicator(progress)
-		} else {
+		} else if (showIcon) {
 			icon()
 		}
+
+		if (label != null && showLabel)
+			Text(label)
 	}
 }

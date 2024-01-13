@@ -19,9 +19,12 @@ fun FloatingActionButtons() = Section("Floating action buttons") {
 	ButtonGroup {
 		for (theme in FloatingActionButtonTheme.entries) {
 			FloatingActionButton(
+				label = "Action",
 				tooltip = parameters.named("Tooltip", defaultValue = "FAB"),
 				action = { window.alert("Clicked") },
 				progress = parameters.progress(),
+				showIcon = parameters.named("Show icon", defaultValue = true),
+				showLabel = parameters.named("Show label", defaultValue = false),
 				theme = theme,
 				size = parameters.named("Size", FloatingActionButtonSize.Regular)
 			) {
