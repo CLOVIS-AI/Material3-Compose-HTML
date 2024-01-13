@@ -39,6 +39,14 @@ Chips that have an impact somewhere else:
 Other useful components:
 - [ChipGroup][opensavvy.material3.tailwind.actions.chips.ChipGroup] is a simple horizontal layout to correctly space multiple chips acting in a single group.
 
+# Package opensavvy.material3.tailwind.actions.fab
+
+Floating Action Buttons (FABs) are large buttons that let the user trigger the main action on a screen.
+
 # Package opensavvy.material3.tailwind.communication.progress
 
 Indicators to communicate the progress of an ongoing operation to the user.
+
+# Package opensavvy.material3.tailwind.containment.card
+
+Group related information into a cohesive unit.
