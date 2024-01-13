@@ -4,6 +4,7 @@ plugins {
 	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
 
 	alias(libs.plugins.vite)
+	alias(libs.plugins.resources.consumer)
 }
 
 kotlin {
@@ -26,4 +27,8 @@ kotlin {
 			implementation(devNpm("autoprefixer", libs.versions.autoprefixer.get()))
 		}
 	}
+}
+
+dependencies {
+	transitiveJsResources(projects.tailwindcss)
 }
