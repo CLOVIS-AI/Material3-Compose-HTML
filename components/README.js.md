@@ -50,3 +50,9 @@ Indicators to communicate the progress of an ongoing operation to the user.
 # Package opensavvy.material3.tailwind.containment.card
 
 Group related information into a cohesive unit.
+
+# Package opensavvy.material3.tailwind.selection
+
+Selection components let people specify choices.
+
+- [Switch][opensavvy.material3.tailwind.selection.Switch] toggles the selection of an item on or off.
