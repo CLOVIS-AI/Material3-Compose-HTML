@@ -10,7 +10,7 @@ fun Section(
 	title: String,
 	block: @Composable () -> Unit,
 ) = Article({
-	classes("flex", "flex-col", "gap-1")
+	classes("flex", "flex-col", "gap-2")
 }) {
 	P({
 		classes("text-4xl", "text-extrabold", "pt-4", "mb-2")
