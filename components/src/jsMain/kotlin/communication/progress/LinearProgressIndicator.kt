@@ -3,8 +3,6 @@ package opensavvy.material3.tailwind.communication.progress
 import androidx.compose.runtime.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import opensavvy.material3.tailwind.ExperimentalComponent
-import opensavvy.material3.tailwind.UnfinishedComponent
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.ExperimentalComposeWebSvgApi
@@ -23,9 +21,7 @@ import org.jetbrains.compose.web.svg.Svg
  *
  * [Material3 Specs](https://m3.material.io/components/progress-indicators/overview).
  */
-@OptIn(ExperimentalComposeWebSvgApi::class)
-@ExperimentalComponent
-@UnfinishedComponent
+@ExperimentalComposeWebSvgApi
 @Composable
 fun LinearProgressIndicator(progress: Progress) = Svg("0 0 100 10", {
 	attr("preserveAspectRatio", "none")
