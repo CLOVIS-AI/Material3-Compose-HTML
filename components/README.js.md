@@ -2,6 +2,8 @@
 
 Compose for HTML implementation of the Material3 components, using TailwindCSS.
 
+<a href="https://search.maven.org/search?q=dev.opensavvy.material3.tailwind.components"><img src="https://img.shields.io/maven-central/v/dev.opensavvy.material3.tailwind/components.svg?label=Maven%20Central"></a>
+
 # Package opensavvy.material3.tailwind
 
 Classes and tools common to all components.
