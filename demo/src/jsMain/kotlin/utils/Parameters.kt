@@ -8,11 +8,15 @@ import opensavvy.material3.tailwind.actions.chips.AssistChip
 import opensavvy.material3.tailwind.actions.chips.ChipGroup
 import opensavvy.material3.tailwind.actions.chips.FilterChip
 import opensavvy.material3.tailwind.actions.fab.FloatingActionButtonSize
+import opensavvy.material3.tailwind.selection.Checkbox
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading
 import org.jetbrains.compose.web.attributes.InputType
-import org.jetbrains.compose.web.dom.*
+import org.jetbrains.compose.web.dom.Input
+import org.jetbrains.compose.web.dom.Label
+import org.jetbrains.compose.web.dom.P
+import org.jetbrains.compose.web.dom.Text
 import kotlin.enums.EnumEntries
 import kotlin.reflect.KClass
 
@@ -86,9 +90,7 @@ private class Parameter<T: Any>(
 				value(state as String)
 				onInput { state = it.value as T }
 			}
-			Boolean::class -> CheckboxInput(state as Boolean) {
-				onInput { state = it.value as T }
-			}
+			Boolean::class -> Checkbox(state as Boolean, { state = it as T })
 			Progress::class -> {
 				Text(state.toString())
 				ChipGroup {
