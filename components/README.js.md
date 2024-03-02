@@ -57,4 +57,5 @@ Group related information into a cohesive unit.
 
 Selection components let people specify choices.
 
-- [Switch][opensavvy.material3.tailwind.selection.Switch] toggles the selection of an item on or off.
+- [Switch][opensavvy.material3.tailwind.selection.Switch] toggles the selection of an item on or off, for example settings.
+- [Checkbox][opensavvy.material3.tailwind.selection.Checkbox] toggles the selection of multiple related items on or off.

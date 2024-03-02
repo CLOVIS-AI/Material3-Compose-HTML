@@ -61,7 +61,7 @@ Navigation:
 
 Selection:
 
-- Checkbox: #60, #61
+- Checkbox: #61
 - Chips: #62, #63
 - Date pickers: #64, #65
 - Menus: #66, #67
