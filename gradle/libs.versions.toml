@@ -8,7 +8,7 @@ kotlin-js-resources = "0.1.3"  # https://gitlab.com/opensavvy/automation/kotlin-
 # CSS
 tailwindcss = "3.4.1"          # https://www.npmjs.com/package/tailwindcss
 postcss = "8.4.35"             # https://www.npmjs.com/package/postcss
-autoprefixer = "10.4.17"       # https://www.npmjs.com/package/autoprefixer
+autoprefixer = "10.4.18"       # https://www.npmjs.com/package/autoprefixer
 
 [plugins]
 vite = { id = "dev.opensavvy.vite.kotlin", version.ref = "kotlin-vite" }
