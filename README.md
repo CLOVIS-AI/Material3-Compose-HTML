@@ -45,7 +45,7 @@ Containment:
 - Cards: #33
 - Carousel: #34, #35
 - Dialogs: #36, #37
-- Divider: #38, #39
+- Divider
 - Lists: #40, #41
 - Side sheets: #42, #43
 

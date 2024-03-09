@@ -11,6 +11,7 @@ import opensavvy.material3.tailwind.demo.components.actions.Chips
 import opensavvy.material3.tailwind.demo.components.actions.FloatingActionButtons
 import opensavvy.material3.tailwind.demo.components.communication.LoadingIndicators
 import opensavvy.material3.tailwind.demo.components.containment.Cards
+import opensavvy.material3.tailwind.demo.components.containment.Dividers
 import opensavvy.material3.tailwind.demo.components.selection.Checkboxes
 import opensavvy.material3.tailwind.demo.components.selection.Switches
 import opensavvy.material3.tailwind.demo.utils.SchemeSelector
@@ -27,6 +28,7 @@ fun main() {
 			Chips()
 			LoadingIndicators()
 			Cards()
+			Dividers()
 			Switches()
 			Checkboxes()
 		}
