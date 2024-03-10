@@ -53,6 +53,13 @@ Indicators to communicate the progress of an ongoing operation to the user.
 
 Group related information into a cohesive unit.
 
+# Package opensavvy.material3.tailwind.containment.dividers
+
+Thin lines that group content in lists or other containers.
+
+- [Divider][opensavvy.material3.tailwind.containment.dividers.Divider] visually groups components and creates hierarchy.
+- [InsetDivider][opensavvy.material3.tailwind.containment.dividers.InsetDivider] separate related content within a section.
+
 # Package opensavvy.material3.tailwind.selection
 
 Selection components let people specify choices.
