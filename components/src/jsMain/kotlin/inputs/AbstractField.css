@@ -1,0 +1,17 @@
+.mdk-field {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	display: inline-block;
+
+	width: fit-content;
+	max-width: 40rem;
+}
+
+.mdk-field-outlined {
+
+}
+
+.mdk-field-filled {
+	background-color: var(--mdk-surface-cont-highest);
+	color: var(--mdk-surface-on);
+}

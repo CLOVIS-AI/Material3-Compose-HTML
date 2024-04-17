@@ -8,6 +8,7 @@ import opensavvy.material3.tailwind.actions.chips.AssistChip
 import opensavvy.material3.tailwind.actions.chips.ChipGroup
 import opensavvy.material3.tailwind.actions.chips.FilterChip
 import opensavvy.material3.tailwind.actions.fab.FloatingActionButtonSize
+import opensavvy.material3.tailwind.inputs.FieldStyle
 import opensavvy.material3.tailwind.selection.Checkbox
 import opensavvy.progress.Progress
 import opensavvy.progress.done
@@ -119,6 +120,7 @@ private class Parameter<T: Any>(
 				}
 			}
 			FloatingActionButtonSize::class -> drawEnum(FloatingActionButtonSize.entries)
+			FieldStyle::class -> drawEnum(FieldStyle.entries)
 			else -> Text("Unsupported parameter type: $type")
 		}
 	}
