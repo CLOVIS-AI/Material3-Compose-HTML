@@ -1,2 +1,15 @@
 /* noinspection CssUnknownTarget IDEA doesn't know the folder exists */
 @import "imported/mdk.css";
+
+/* region Reset */
+
+body {
+	margin: 0;
+}
+
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+/* endregion */
