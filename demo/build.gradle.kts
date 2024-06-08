@@ -28,4 +28,5 @@ kotlin {
 
 dependencies {
 	transitiveJsResources(projects.theme)
+	transitiveJsResources(projects.components)
 }

@@ -2,6 +2,8 @@ plugins {
 	alias(opensavvyConventions.plugins.base)
 	alias(opensavvyConventions.plugins.kotlin.library)
 	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
+
+	alias(libs.plugins.resources.producer)
 }
 
 kotlin {

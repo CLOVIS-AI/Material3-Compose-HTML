@@ -1,5 +1,6 @@
 /* noinspection CssUnknownTarget IDEA doesn't know the folder exists */
 @import "imported/mdk.css";
+@import "imported/mdk-components.css";
 
 /* region Reset */
 
