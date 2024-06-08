@@ -5,11 +5,6 @@ pedestal = "2.1.0"             # https://gitlab.com/opensavvy/pedestal/-/release
 kotlin-vite = "0.3.6"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
 kotlin-js-resources = "0.1.3"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
 
-# CSS
-tailwindcss = "3.4.1"          # https://www.npmjs.com/package/tailwindcss
-postcss = "8.4.35"             # https://www.npmjs.com/package/postcss
-autoprefixer = "10.4.18"       # https://www.npmjs.com/package/autoprefixer
-
 [plugins]
 vite = { id = "dev.opensavvy.vite.kotlin", version.ref = "kotlin-vite" }
 resources-producer = { id = "dev.opensavvy.resources.producer", version.ref = "kotlin-js-resources" }

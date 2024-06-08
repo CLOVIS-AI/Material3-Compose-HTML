@@ -15,16 +15,14 @@ kotlin {
 		dependencies {
 			api(compose.runtime)
 			api(compose.html.core)
-
-			api(npm("tailwindcss", libs.versions.tailwindcss.get()))
 		}
 	}
 }
 
 library {
-	name.set("TailwindCSS for Kotlin")
-	description.set("Default TailwindCSS configuration for Kotlin")
-	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
+	name.set("Material3 Colors and themes for Kotlin JS")
+	description.set("Expose the Material3 color theme to Kotlin/JS projects")
+	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-html")
 
 	license.set {
 		name.set("Apache 2.0")

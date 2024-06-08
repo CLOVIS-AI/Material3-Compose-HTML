@@ -1,4 +1,4 @@
-package opensavvy.material3.css
+package opensavvy.material3.theme
 
 import androidx.compose.runtime.*
 import kotlinx.browser.window
@@ -27,19 +27,11 @@ fun InstallColorScheme(
 	}
 
 	Div({
-		classes(
-			"bg-surface",
-			"text-surface-on",
-			"decoration-primary",
-			"accent-primary",
-			"outline-outline",
-			"delay-100",
-			"transition-colors",
-		)
+		classes("mdk-root")
 
 		style {
 			fun aliasVariable(name: String, light: String, dark: String) {
-				variable("--md-token-$name", "var(--md-ref-palette-${if (isDark) dark else light})")
+				variable("--mdk-$name", "var(--mdk-ref-${if (isDark) dark else light})")
 			}
 
 			// Special
@@ -54,9 +46,9 @@ fun InstallColorScheme(
 
 			// Primary colors
 			aliasVariable("primary", "primary40", "primary80")
-			aliasVariable("primary-container", "primary90", "primary30")
+			aliasVariable("primary-cont", "primary90", "primary30")
 			aliasVariable("primary-on", "primary100", "primary20")
-			aliasVariable("primary-container-on", "primary10", "primary90")
+			aliasVariable("primary-cont-on", "primary10", "primary90")
 			aliasVariable("primary-inverse", "primary80", "primary40")
 			aliasVariable("primary-fixed", "primary90", "primary90")
 			aliasVariable("primary-fixed-dim", "primary80", "primary80")
@@ -65,9 +57,9 @@ fun InstallColorScheme(
 
 			// Secondary colors
 			aliasVariable("secondary", "secondary40", "secondary80")
-			aliasVariable("secondary-container", "secondary90", "secondary30")
+			aliasVariable("secondary-cont", "secondary90", "secondary30")
 			aliasVariable("secondary-on", "secondary100", "secondary20")
-			aliasVariable("secondary-container-on", "secondary10", "secondary90")
+			aliasVariable("secondary-cont-on", "secondary10", "secondary90")
 			aliasVariable("secondary-inverse", "secondary80", "secondary40")
 			aliasVariable("secondary-fixed", "secondary90", "secondary90")
 			aliasVariable("secondary-fixed-dim", "secondary80", "secondary80")
@@ -76,9 +68,9 @@ fun InstallColorScheme(
 
 			// Tertiary colors
 			aliasVariable("tertiary", "tertiary40", "tertiary80")
-			aliasVariable("tertiary-container", "tertiary90", "tertiary30")
+			aliasVariable("tertiary-cont", "tertiary90", "tertiary30")
 			aliasVariable("tertiary-on", "tertiary100", "tertiary20")
-			aliasVariable("tertiary-container-on", "tertiary10", "tertiary90")
+			aliasVariable("tertiary-cont-on", "tertiary10", "tertiary90")
 			aliasVariable("tertiary-inverse", "tertiary80", "tertiary40")
 			aliasVariable("tertiary-fixed", "tertiary90", "tertiary90")
 			aliasVariable("tertiary-fixed-dim", "tertiary80", "tertiary80")
@@ -87,9 +79,9 @@ fun InstallColorScheme(
 
 			// Error colors
 			aliasVariable("error", "error40", "error80")
-			aliasVariable("error-container", "error90", "error30")
+			aliasVariable("error-cont", "error90", "error30")
 			aliasVariable("error-on", "error100", "error20")
-			aliasVariable("error-container-on", "error10", "error90")
+			aliasVariable("error-cont-on", "error10", "error90")
 
 			// Surface
 			aliasVariable("surface", "neutral98", "neutral6")
@@ -101,11 +93,11 @@ fun InstallColorScheme(
 			aliasVariable("surface-tint", "primary40", "primary80")
 			aliasVariable("surface-dim", "neutral87", "neutral6")
 			aliasVariable("surface-bright", "neutral98", "neutral24")
-			aliasVariable("surface-container-lowest", "neutral100", "neutral4")
-			aliasVariable("surface-container-low", "neutral96", "neutral10")
-			aliasVariable("surface-container", "neutral94", "neutral12")
-			aliasVariable("surface-container-high", "neutral92", "neutral17")
-			aliasVariable("surface-container-highest", "neutral90", "neutral22")
+			aliasVariable("surface-cont-lowest", "neutral100", "neutral4")
+			aliasVariable("surface-cont-low", "neutral96", "neutral10")
+			aliasVariable("surface-cont", "neutral94", "neutral12")
+			aliasVariable("surface-cont-high", "neutral92", "neutral17")
+			aliasVariable("surface-cont-highest", "neutral90", "neutral22")
 		}
 	}, content)
 }

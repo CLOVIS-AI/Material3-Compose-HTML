@@ -1,8 +1,8 @@
-# Module TailwindCSS for Kotlin
+# Module Material3 Colors and themes for Kotlin JS
 
-CSS utilities to declare color themes, TailwindCSS configuration, etc.
+CSS utilities to declare color themes, etc.
 
-<a href="https://search.maven.org/search?q=dev.opensavvy.material3.tailwind.tailwindcss"><img src="https://img.shields.io/maven-central/v/dev.opensavvy.material3.tailwind/tailwindcss.svg?label=Maven%20Central"></a>
+<a href="https://search.maven.org/search?q=dev.opensavvy.material3.tailwind.html"><img src="https://img.shields.io/maven-central/v/dev.opensavvy.material3.html/theme.svg?label=Maven%20Central"></a>
 
 ## Design tokens
 
@@ -50,30 +50,10 @@ dependencies {
 
 To learn more about the Gradle plugin, see [its documentation](https://opensavvy.gitlab.io/automation/kotlin-js-resources/api-docs/).
 
-Now, edit your main CSS file by adding:
+Edit your main CSS file by adding:
 
-```postcss
-@import "imported/material-colors.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-Edit your `tailwind.config.cjs` file to import the Material3 theme:
-
-```js
-const material = require('./imported/tailwind-material3.config.cjs')
-
-module.exports = {
-	// …
-	theme: {
-		extend: {
-			...material.thead.extend,
-		},
-	},
-	// …
-};
+```css
+@import "imported/mdk.css";
 ```
 
 Don't forget to call [InstallColorScheme][opensavvy.material3.css.InstallColorScheme] at the composable root to select the color scheme.
@@ -82,4 +62,4 @@ Don't forget to call [InstallColorScheme][opensavvy.material3.css.InstallColorSc
 
 We do not recommend this solution, because each time you update this library, you will be required to manually update the configuration files you import from the library. If you use a build system that doesn't recognize [Gradle module metadata](https://docs.gradle.org/current/userguide/publishing_gradle_module_metadata.html), you do not have any other options.
 
-To put simply, this solution is [to copy the configuration files](https://gitlab.com/opensavvy/ui/compose-material3-tailwind/-/tree/main/tailwindcss/src/jsMain/resources) into your own project.
+To put simply, this solution is [to copy the configuration files](https://gitlab.com/opensavvy/ui/compose-material3-html/-/tree/main/theme/src/jsMain/resources) into your own project.

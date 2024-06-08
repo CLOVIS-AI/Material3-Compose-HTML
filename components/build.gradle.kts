@@ -11,7 +11,7 @@ kotlin {
 
 	val jsMain by sourceSets.getting {
 		dependencies {
-			api(projects.tailwindcss)
+			api(projects.theme)
 			api(compose.runtime)
 			api(compose.html.core)
 			implementation(compose.html.svg)
@@ -24,7 +24,7 @@ kotlin {
 library {
 	name.set("Material3 Components")
 	description.set("Implementation of the Material3 UI components")
-	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
+	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-html")
 
 	license.set {
 		name.set("Apache 2.0")
