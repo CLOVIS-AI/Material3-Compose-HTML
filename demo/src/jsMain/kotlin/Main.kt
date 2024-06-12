@@ -15,6 +15,8 @@ import opensavvy.material3.tailwind.demo.components.selection.Switches
 import opensavvy.material3.tailwind.demo.utils.SchemeSelector
 import opensavvy.material3.theme.ColorScheme
 import opensavvy.material3.theme.InstallColorScheme
+import org.jetbrains.compose.web.dom.H1
+import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.renderComposable
 
 fun main() {
@@ -22,6 +24,10 @@ fun main() {
 		var scheme by remember { mutableStateOf(ColorScheme.System) }
 
 		InstallColorScheme(scheme) {
+			H1 {
+				Text("Material3 for Compose HTML")
+			}
+
 			SchemeSelector(scheme, onSelect = { scheme = it })
 			Buttons()
 			FloatingActionButtons()

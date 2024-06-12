@@ -13,10 +13,8 @@ import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading
 import org.jetbrains.compose.web.attributes.InputType
-import org.jetbrains.compose.web.dom.Input
-import org.jetbrains.compose.web.dom.Label
-import org.jetbrains.compose.web.dom.P
-import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.*
 import kotlin.enums.EnumEntries
 import kotlin.reflect.KClass
 
@@ -40,13 +38,22 @@ class Parameters(
 	@Composable
 	fun draw() {
 		P({
-			classes("my-2")
+			style {
+				marginTop(0.5.cssRem)
+				marginBottom(0.5.cssRem)
+			}
 		}) {
 			Text("States:")
 		}
 
-		for (parameter in parameters.values)
-			parameter.draw()
+		Div({
+			style {
+				marginLeft(0.5.cssRem)
+			}
+		}) {
+			for (parameter in parameters.values)
+				parameter.draw()
+		}
 	}
 }
 
@@ -81,7 +88,10 @@ private class Parameter<T: Any>(
 	@Suppress("UNCHECKED_CAST")
 	@Composable
 	fun draw() = Label(attrs = {
-		classes("flex", "gap-1.5")
+		style {
+			display(DisplayStyle.Flex)
+			gap(1.5.px)
+		}
 	}) {
 		Text("$name: ")
 

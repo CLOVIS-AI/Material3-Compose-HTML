@@ -6,6 +6,9 @@ import opensavvy.material3.tailwind.demo.utils.named
 import opensavvy.material3.tailwind.demo.utils.rememberParameters
 import opensavvy.material3.tailwind.selection.Checkbox
 import opensavvy.material3.tailwind.selection.Tristate
+import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.marginLeft
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Label
 import org.jetbrains.compose.web.dom.Text
@@ -49,7 +52,9 @@ fun Checkboxes() = Section("Checkbox") {
 	}
 
 	Div({
-		classes("ml-4")
+		style {
+			marginLeft(1.cssRem)
+		}
 	}) {
 		for ((item, active) in nested) Div {
 			Label {
