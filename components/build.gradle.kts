@@ -11,7 +11,7 @@ kotlin {
 		browser()
 	}
 
-	val jsMain by sourceSets.getting {
+	sourceSets.jsMain {
 		dependencies {
 			api(projects.theme)
 			api(compose.runtime)
@@ -20,6 +20,9 @@ kotlin {
 
 			api(libs.pedestal.progress)
 		}
+
+		resources.srcDir(file("src/jsMain/kotlin"))
+		resources.exclude("**/*.kt")
 	}
 }
 
