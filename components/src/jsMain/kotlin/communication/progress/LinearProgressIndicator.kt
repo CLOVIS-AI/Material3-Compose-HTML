@@ -25,21 +25,15 @@ import org.jetbrains.compose.web.svg.Svg
 @Composable
 fun LinearProgressIndicator(progress: Progress) = Svg("0 0 100 10", {
 	attr("preserveAspectRatio", "none")
-	classes(
-		"w-full",
-		"transition-all",
-		"duration-500",
-	)
 
-	if (progress != done()) {
-		classes("h-1", "my-0")
-	} else {
-		classes("h-0", "mt-0.5", "mb-0.5")
-	}
+	classes("mdk-progress-linear")
+
+	if (progress == done())
+		classes("mdk-progress-linear-done")
 }) {
 	// Track
 	Line(0, 5, 100, 5, attrs = {
-		classes("stroke-surface-container-highest", "stroke-[10px]")
+		classes("mdk-progress-linear-track")
 	})
 
 	// Positions
@@ -87,11 +81,11 @@ fun LinearProgressIndicator(progress: Progress) = Svg("0 0 100 10", {
 
 	// Active indicator
 	Line(0, 5, 100, 5, attrs = {
-		classes("stroke-primary", "translate-x-[--start-pos]", "scale-x-[--end-pos]", "stroke-[10px]", "transition-all", "duration-1000", "ease-in-out")
+		classes("mdk-progress-linear-indicator")
 
 		style {
-			variable("--start-pos", "${(startPos * 100).toInt()}%")
-			variable("--end-pos", endPos)
+			variable("--mdk-progress-linear-start-pos", "${(startPos * 100).toInt()}%")
+			variable("--mdk-progress-linear-end-pos", endPos)
 		}
 	})
 }
