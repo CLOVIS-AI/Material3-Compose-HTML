@@ -5,3 +5,9 @@
 @import "actions/buttons/FilledTonalButton.css";
 @import "actions/buttons/OutlinedButton.css";
 @import "actions/buttons/TextButton.css";
+
+@import "actions/chips/AssistChip.css";
+@import "actions/chips/ChipGroup.css";
+@import "actions/chips/FilterChip.css";
+@import "actions/chips/InputChip.css";
+@import "actions/chips/SuggestionChip.css";

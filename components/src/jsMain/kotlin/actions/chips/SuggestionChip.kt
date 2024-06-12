@@ -54,7 +54,7 @@ fun SuggestionChip(
 		if (!enabled)
 			this.disabled()
 
-		classes("bg-blue-800")
+		classes("mdk-chip-suggestion")
 
 		attrs()
 	}) {

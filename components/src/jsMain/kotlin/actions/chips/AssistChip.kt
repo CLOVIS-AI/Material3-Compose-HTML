@@ -63,7 +63,7 @@ fun AssistChip(
 		if (!enabled)
 			this.disabled()
 
-		classes("bg-blue-400")
+		classes("mdk-chip-assist")
 
 		attrs()
 	}) {
