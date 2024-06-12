@@ -41,13 +41,14 @@ fun Card(
 	attrs: AttrsScope<HTMLElement>.() -> Unit = {},
 	content: @Composable () -> Unit,
 ) = Article({
-	classes("flex", "flex-col", "gap-1")
-
-	when (style) {
-		Elevated -> classes("bg-surface-container")
-		Filled -> classes("bg-surface-container-highest")
-		Outlined -> classes("outline", "outline-1", "outline-outline-variant")
-	}
+	classes(
+		"mdk-card",
+		when (style) {
+			Elevated -> "mdk-card-elevated"
+			Filled -> "mdk-card-filled"
+			Outlined -> "mdk-card-outlined"
+		}
+	)
 
 	attrs()
 }) {
