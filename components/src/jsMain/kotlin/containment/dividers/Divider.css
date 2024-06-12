@@ -1,0 +1,9 @@
+.mdk-divider {
+	border-width: 1px;
+	border-color: var(--mdk-outline-variant);
+}
+
+.mdk-divider-inset {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
