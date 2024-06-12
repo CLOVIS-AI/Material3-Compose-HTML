@@ -37,7 +37,10 @@ fun OutlinedButton(
 	progress: Progress = done(),
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
+)= AbstractButton(
+	label, action, enabled, progress, icon
 ) {
-	// For now, it's just an alias for a text button
-	TextButton(label, action, enabled, progress, icon, attrs)
+	classes("mdk-button-outlined")
+
+	attrs()
 }
