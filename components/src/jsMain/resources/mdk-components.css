@@ -16,3 +16,6 @@
 
 @import "containment/card/Card.css";
 @import "containment/dividers/Divider.css";
+
+@import "selection/Checkbox.css";
+@import "selection/Switch.css";
