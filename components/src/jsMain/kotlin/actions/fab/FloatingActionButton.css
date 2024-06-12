@@ -1,0 +1,35 @@
+.mdk-fab {
+
+}
+
+.mdk-fab-color-primary {
+	background-color: var(--mdk-primary-cont);
+	color: var(--mdk-primary-cont-on);
+}
+
+.mdk-fab-color-secondary {
+	background-color: var(--mdk-secondary-cont);
+	color: var(--mdk-secondary-cont-on);
+}
+
+.mdk-fab-color-tertiary {
+	background-color: var(--mdk-tertiary-cont);
+	color: var(--mdk-tertiary-cont-on);
+}
+
+.mdk-fab-color-surface {
+	background-color: var(--mdk-surface-cont);
+}
+
+.mdk-fab-regular {
+	padding: 0.5rem;
+}
+
+.mdk-fab-small {
+	padding: 0.25rem;
+}
+
+.mdk-fab-large {
+	padding: 1rem;
+	font-size: large;
+}

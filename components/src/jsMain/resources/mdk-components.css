@@ -11,3 +11,5 @@
 @import "actions/chips/FilterChip.css";
 @import "actions/chips/InputChip.css";
 @import "actions/chips/SuggestionChip.css";
+
+@import "actions/fab/FloatingActionButton.css";
