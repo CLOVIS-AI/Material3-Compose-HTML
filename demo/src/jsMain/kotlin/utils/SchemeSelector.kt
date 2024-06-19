@@ -1,9 +1,9 @@
 package opensavvy.material3.tailwind.demo.utils
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.css.ColorScheme
 import opensavvy.material3.tailwind.actions.chips.ChipGroup
 import opensavvy.material3.tailwind.actions.chips.FilterChip
+import opensavvy.material3.theme.ColorScheme
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 

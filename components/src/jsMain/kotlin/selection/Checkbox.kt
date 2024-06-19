@@ -45,6 +45,8 @@ fun Checkbox(
 	attrs: InputAttrsScope<Boolean>.() -> Unit = {},
 ) {
 	Input(InputType.Checkbox) {
+		classes("mdk-checkbox")
+
 		checked(state == Tristate.Active) // In HTML, indeterminate and checked are cumulative. We decide that 'indeterminate' counts as inactive
 		prop<HTMLInputElement, Boolean>({ element, it -> element.indeterminate = it }, state == Tristate.Indeterminate)
 

@@ -2,6 +2,8 @@ plugins {
 	alias(opensavvyConventions.plugins.base)
 	alias(opensavvyConventions.plugins.kotlin.library)
 	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
+
+	alias(libs.plugins.resources.producer)
 }
 
 kotlin {
@@ -9,22 +11,25 @@ kotlin {
 		browser()
 	}
 
-	val jsMain by sourceSets.getting {
+	sourceSets.jsMain {
 		dependencies {
-			api(projects.tailwindcss)
+			api(projects.theme)
 			api(compose.runtime)
 			api(compose.html.core)
 			implementation(compose.html.svg)
 
 			api(libs.pedestal.progress)
 		}
+
+		resources.srcDir(file("src/jsMain/kotlin"))
+		resources.exclude("**/*.kt")
 	}
 }
 
 library {
 	name.set("Material3 Components")
 	description.set("Implementation of the Material3 UI components")
-	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-tailwind")
+	homeUrl.set("https://gitlab.com/opensavvy/ui/compose-material3-html")
 
 	license.set {
 		name.set("Apache 2.0")

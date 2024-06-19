@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import opensavvy.material3.tailwind.ExperimentalComponent
 import opensavvy.material3.tailwind.UnfinishedComponent
 import org.jetbrains.compose.web.attributes.builders.InputAttrsScope
+import org.jetbrains.compose.web.attributes.disabled
 import org.jetbrains.compose.web.dom.CheckboxInput
 
 /**
@@ -40,13 +41,10 @@ fun Switch(
 	enabled: Boolean = true,
 	attrs: InputAttrsScope<Boolean>.() -> Unit = {},
 ) = CheckboxInput(active) {
-	classes("outline", "outline-4", "rounded-full", "w-8")
+	classes("mdk-switch")
 
-	when {
-		enabled && active -> classes("bg-primary-container-on", "text-primary-on")
-		enabled && !active -> classes("text-surface-on")
-		!enabled -> classes("text-surface-container-highest", "outline-outline")
-	}
+	if (!enabled)
+		disabled()
 
 	onClick { action(!active) }
 

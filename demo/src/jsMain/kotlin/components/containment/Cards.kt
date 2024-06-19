@@ -17,13 +17,11 @@ fun Cards() = Section("Cards") {
 	val parameters = rememberParameters()
 
 	Div({
-		classes("flex", "flex-col", "gap-2")
+		classes("demo-cards")
 	}) {
 		for (style in CardStyle.entries) {
 			Card(style) {
-				H3({
-					classes("text-xl")
-				}) {
+				H3 {
 					Text("Card title")
 				}
 

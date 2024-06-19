@@ -1,0 +1,40 @@
+
+.mdk-progress-linear {
+	width: 100%;
+
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 500ms;
+
+	height: .25rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.mdk-progress-linear-done {
+	height: 0;
+	margin-top: .25rem;
+	margin-bottom: .25rem;
+}
+
+.mdk-progress-linear-track {
+	stroke: var(--mdk-surface-cont-highest);
+	stroke-width: 10px;
+}
+
+:root {
+	/* Default values for the progress indicators (so IDEA doesn't say they are missing) */
+	/* They should be set by the Kotlin code */
+	--mdk-progress-linear-start-pos: 0;
+	--mdk-progress-linear-end-pos: 0;
+}
+
+.mdk-progress-linear-indicator {
+	stroke: var(--mdk-primary);
+	stroke-width: 10px;
+	transform: translateX(var(--mdk-progress-linear-start-pos)) scaleX(var(--mdk-progress-linear-end-pos));
+
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 1000ms;
+}

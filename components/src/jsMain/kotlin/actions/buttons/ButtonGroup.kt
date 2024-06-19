@@ -18,7 +18,7 @@ fun ButtonGroup(
 	attrs: AttrsScope<HTMLDivElement>.() -> Unit = {},
 	block: @Composable ElementScope<HTMLDivElement>.() -> Unit,
 ) = Div({
-	classes("flex", "flex-row", "flex-wrap", "gap-2")
+	classes("mdk-button-group")
 
 	attrs()
 }) {

@@ -66,7 +66,7 @@ fun InputChip(
 		if (!enabled)
 			this.disabled()
 
-		classes("bg-blue-600")
+		classes("mdk-chip-input")
 
 		attrs()
 	}) {

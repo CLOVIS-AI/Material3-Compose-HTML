@@ -1,0 +1,17 @@
+.mdk-switch {
+	outline: var(--mdk-outline) 4px;
+	border-radius: 9999px;
+	width: 2rem;
+
+	color: var(--mdk-surface-on);
+}
+
+.mdk-switch:disabled {
+	background-color: var(--mdk-surface-cont-highest);
+	color: var(--mdk-primary-on);
+}
+
+.mdk-switch:checked {
+	background-color: var(--mdk-primary-cont-on);
+	color: var(--mdk-primary-on);
+}

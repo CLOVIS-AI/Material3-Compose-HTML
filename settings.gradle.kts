@@ -7,7 +7,7 @@
  * in the user manual at https://docs.gradle.org/8.1.1/userguide/multi_project_builds.html
  */
 
-rootProject.name = "Material3-Tailwind"
+rootProject.name = "Material3-KJS"
 
 pluginManagement {
 	repositories {
@@ -30,6 +30,6 @@ include(
 	"gradle:templates:template-lib",
 
 	"demo",
-	"tailwindcss",
+	"theme",
 	"components",
 )

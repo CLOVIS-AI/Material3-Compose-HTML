@@ -1,0 +1,188 @@
+
+@layer mdk-colors {
+	:root {
+		/* region Palette */
+
+		/*
+		 * NAMING
+		 * These variables will be used in many places throughout the codebase,
+		 * so they should have short names.
+		 */
+
+		/* primary */
+		--mdk-ref-primary0: rgb(0 0 0);
+		--mdk-ref-primary10: rgb(33 0 93);
+		--mdk-ref-primary20: rgb(56 30 114);
+		--mdk-ref-primary30: rgb(79 55 139);
+		--mdk-ref-primary40: rgb(103 80 164);
+		--mdk-ref-primary50: rgb(127 103 190);
+		--mdk-ref-primary60: rgb(154 130 219);
+		--mdk-ref-primary70: rgb(182 157 248);
+		--mdk-ref-primary80: rgb(208 188 255);
+		--mdk-ref-primary90: rgb(234 221 255);
+		--mdk-ref-primary95: rgb(246 237 255);
+		--mdk-ref-primary99: rgb(255 251 254);
+		--mdk-ref-primary100: rgb(255 255 255);
+
+		/* secondary */
+		--mdk-ref-secondary0: rgb(0 0 0);
+		--mdk-ref-secondary10: rgb(29 25 43);
+		--mdk-ref-secondary20: rgb(51 45 65);
+		--mdk-ref-secondary30: rgb(74 68 88);
+		--mdk-ref-secondary40: rgb(98 91 113);
+		--mdk-ref-secondary50: rgb(122 114 137);
+		--mdk-ref-secondary60: rgb(149 141 165);
+		--mdk-ref-secondary70: rgb(176 167 192);
+		--mdk-ref-secondary80: rgb(204 194 220);
+		--mdk-ref-secondary90: rgb(232 222 248);
+		--mdk-ref-secondary95: rgb(246 237 255);
+		--mdk-ref-secondary99: rgb(255 251 254);
+		--mdk-ref-secondary100: rgb(255 255 255);
+
+		/* tertiary */
+		--mdk-ref-tertiary0: rgb(0 0 0);
+		--mdk-ref-tertiary10: rgb(49 17 29);
+		--mdk-ref-tertiary20: rgb(73 37 50);
+		--mdk-ref-tertiary30: rgb(99 59 72);
+		--mdk-ref-tertiary40: rgb(125 82 96);
+		--mdk-ref-tertiary50: rgb(152 104 119);
+		--mdk-ref-tertiary60: rgb(181 131 146);
+		--mdk-ref-tertiary70: rgb(210 157 172);
+		--mdk-ref-tertiary80: rgb(239 184 200);
+		--mdk-ref-tertiary90: rgb(255 216 228);
+		--mdk-ref-tertiary95: rgb(255 236 241);
+		--mdk-ref-tertiary99: rgb(255 251 250);
+		--mdk-ref-tertiary100: rgb(255 255 255);
+
+		/* error */
+		--mdk-ref-error0: rgb(0 0 0);
+		--mdk-ref-error10: rgb(65 14 11);
+		--mdk-ref-error20: rgb(96 20 16);
+		--mdk-ref-error30: rgb(140 29 24);
+		--mdk-ref-error40: rgb(179 38 30);
+		--mdk-ref-error50: rgb(220 54 46);
+		--mdk-ref-error60: rgb(228 105 98);
+		--mdk-ref-error70: rgb(236 146 142);
+		--mdk-ref-error80: rgb(242 184 181);
+		--mdk-ref-error90: rgb(249 222 220);
+		--mdk-ref-error95: rgb(252 238 238);
+		--mdk-ref-error99: rgb(255 251 249);
+		--mdk-ref-error100: rgb(255 255 255);
+
+		/* neutral */
+		--mdk-ref-neutral0: rgb(0 0 0);
+		--mdk-ref-neutral4: rgb(15 13 19);
+		--mdk-ref-neutral6: rgb(20 18 24);
+		--mdk-ref-neutral10: rgb(28 27 31);
+		--mdk-ref-neutral12: rgb(33 31 38);
+		--mdk-ref-neutral17: rgb(43 41 48);
+		--mdk-ref-neutral20: rgb(49 48 51);
+		--mdk-ref-neutral22: rgb(54 52 59);
+		--mdk-ref-neutral24: rgb(59 56 62);
+		--mdk-ref-neutral30: rgb(72 70 73);
+		--mdk-ref-neutral40: rgb(96 93 98);
+		--mdk-ref-neutral50: rgb(120 117 121);
+		--mdk-ref-neutral60: rgb(147 144 148);
+		--mdk-ref-neutral70: rgb(174 170 174);
+		--mdk-ref-neutral80: rgb(201 197 202);
+		--mdk-ref-neutral87: rgb(222 216 225);
+		--mdk-ref-neutral90: rgb(230 225 229);
+		--mdk-ref-neutral92: rgb(236 230 240);
+		--mdk-ref-neutral94: rgb(243 237 247);
+		--mdk-ref-neutral95: rgb(244 239 244);
+		--mdk-ref-neutral96: rgb(247 242 250);
+		--mdk-ref-neutral98: rgb(254 247 255);
+		--mdk-ref-neutral99: rgb(255 251 254);
+		--mdk-ref-neutral100: rgb(255 255 255);
+
+		/* neutral-variant */
+		--mdk-ref-neutral-variant0: rgb(0 0 0);
+		--mdk-ref-neutral-variant10: rgb(29 26 34);
+		--mdk-ref-neutral-variant20: rgb(50 47 55);
+		--mdk-ref-neutral-variant30: rgb(73 69 79);
+		--mdk-ref-neutral-variant40: rgb(96 93 102);
+		--mdk-ref-neutral-variant50: rgb(121 116 126);
+		--mdk-ref-neutral-variant60: rgb(147 143 153);
+		--mdk-ref-neutral-variant70: rgb(174 169 180);
+		--mdk-ref-neutral-variant80: rgb(202 196 208);
+		--mdk-ref-neutral-variant90: rgb(231 224 236);
+		--mdk-ref-neutral-variant95: rgb(245 238 250);
+		--mdk-ref-neutral-variant99: rgb(255 251 254);
+		--mdk-ref-neutral-variant100: rgb(255 255 255);
+
+		/* endregion */
+		/* region Scheme */
+
+		/*
+		 * This section declares all the style colors for light scheme.
+		 * Dark scheme is set by overriding them, and is done in code.
+		 */
+
+		/* Special */
+		--mdk-scrim: var(--mdk-ref-neutral0);
+		--mdk-shadow: var(--mdk-ref-neutral0);
+		--mdk-outline: var(--mdk-ref-neutral-variant50);
+		--mdk-outline-variant: var(--mdk-ref-neutral-variant80);
+
+		/* Background */
+		--mdk-background: var(--mdk-ref-neutral98);
+		--mdk-background-on: var(--mdk-ref-neutral10);
+
+		/* Primary color */
+		--mdk-primary: var(--mdk-ref-primary40);
+		--mdk-primary-on: var(--mdk-ref-primary100);
+		--mdk-primary-cont: var(--mdk-ref-primary90);
+		--mdk-primary-cont-on: var(--mdk-ref-primary10);
+		--mdk-primary-inverse: var(--mdk-ref-primary80);
+		--mdk-primary-fixed: var(--mdk-ref-primary90);
+		--mdk-primary-fixed-dim: var(--mdk-ref-primary80);
+		--mdk-primary-fixed-on: var(--mdk-ref-primary10);
+		--mdk-primary-fixed-on-variant: var(--mdk-ref-primary30);
+
+		/* Secondary color */
+		--mdk-secondary: var(--mdk-ref-secondary40);
+		--mdk-secondary-on: var(--mdk-ref-secondary100);
+		--mdk-secondary-cont: var(--mdk-ref-secondary90);
+		--mdk-secondary-cont-on: var(--mdk-ref-secondary10);
+		--mdk-secondary-inverse: var(--mdk-ref-secondary80);
+		--mdk-secondary-fixed: var(--mdk-ref-secondary90);
+		--mdk-secondary-fixed-dim: var(--mdk-ref-secondary80);
+		--mdk-secondary-fixed-on: var(--mdk-ref-secondary10);
+		--mdk-secondary-fixed-on-variant: var(--mdk-ref-secondary30);
+
+		/* Tertiary color */
+		--mdk-tertiary: var(--mdk-ref-tertiary40);
+		--mdk-tertiary-on: var(--mdk-ref-tertiary100);
+		--mdk-tertiary-cont: var(--mdk-ref-tertiary90);
+		--mdk-tertiary-cont-on: var(--mdk-ref-tertiary10);
+		--mdk-tertiary-inverse: var(--mdk-ref-tertiary80);
+		--mdk-tertiary-fixed: var(--mdk-ref-tertiary90);
+		--mdk-tertiary-fixed-dim: var(--mdk-ref-tertiary80);
+		--mdk-tertiary-fixed-on: var(--mdk-ref-tertiary10);
+		--mdk-tertiary-fixed-on-variant: var(--mdk-ref-tertiary30);
+
+		/* Error color */
+		--mdk-error: var(--mdk-ref-error40);
+		--mdk-error-on: var(--mdk-ref-error100);
+		--mdk-error-cont: var(--mdk-ref-error90);
+		--mdk-error-cont-on: var(--mdk-ref-error10);
+
+		/* Surface color */
+		--mdk-surface: var(--mdk-ref-neutral98);
+		--mdk-surface-on: var(--mdk-ref-neutral10);
+		--mdk-surface-variant: var(--mdk-ref-neutral-variant90);
+		--mdk-surface-variant-on: var(--mdk-ref-neutral-variant30);
+		--mdk-surface-inverse: var(--mdk-ref-neutral20);
+		--mdk-surface-inverse-on: var(--mdk-ref-neutral95);
+		--mdk-surface-tint: var(--mdk-ref-neutral40);
+		--mdk-surface-dim: var(--mdk-ref-neutral87);
+		--mdk-surface-bright: var(--mdk-ref-neutral98);
+		--mdk-surface-cont-lowest: var(--mdk-ref-neutral100);
+		--mdk-surface-cont-low: var(--mdk-ref-neutral96);
+		--mdk-surface-cont: var(--mdk-ref-neutral94);
+		--mdk-surface-cont-high: var(--mdk-ref-neutral92);
+		--mdk-surface-cont-highest: var(--mdk-ref-neutral90);
+
+		/* endregion */
+	}
+}

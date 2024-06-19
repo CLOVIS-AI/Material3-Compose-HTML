@@ -46,26 +46,10 @@ fun TextButton(
 	progress: Progress = done(),
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
+) = AbstractButton(
+	label, action, enabled, progress, icon
 ) {
-	Button({
-		this.onClick { action() }
+	classes("mdk-button-text")
 
-		if (!enabled)
-			this.disabled()
-
-		classes("bg-red-700")
-
-		attrs()
-	}) {
-		val capitalizedLabel = remember(label) {
-			label.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
-		}
-
-		icon?.invoke()
-
-		Text(capitalizedLabel)
-
-		if (progress != done())
-			Text("…")
-	}
+	attrs()
 }

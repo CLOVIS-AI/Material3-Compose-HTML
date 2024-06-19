@@ -8,8 +8,6 @@ import org.jetbrains.compose.web.dom.Hr
 import org.w3c.dom.HTMLDivElement
 import org.w3c.dom.HTMLHRElement
 
-private val dividerClasses = listOf("border", "border-outline-variant")
-
 /**
  * A horizontal line to visually group components and create hierarchy.
  *
@@ -44,7 +42,7 @@ fun Divider(
 	// HR is a "thematic break between paragraph-level elements" -> that's an inset divider.
 	// Regular divider is purely visual decoration, it has no semantic meaning.
 	Div({
-		classes(dividerClasses)
+		classes("mdk-divider")
 
 		attrs()
 	})
@@ -71,8 +69,7 @@ fun InsetDivider(
 	attrs: AttrsScope<HTMLHRElement>.() -> Unit = {},
 ) {
 	Hr {
-		classes(dividerClasses)
-		classes("mx-4")
+		classes("mdk-divider", "mdk-divider-inset")
 
 		attrs()
 	}

@@ -3,6 +3,8 @@ package opensavvy.material3.tailwind.actions.fab
 import androidx.compose.runtime.Composable
 import opensavvy.material3.tailwind.ExperimentalComponent
 import opensavvy.material3.tailwind.UnfinishedComponent
+import opensavvy.material3.tailwind.actions.fab.FloatingActionButtonSize.*
+import opensavvy.material3.tailwind.actions.fab.FloatingActionButtonTheme.*
 import opensavvy.material3.tailwind.communication.progress.CircularProgressIndicator
 import opensavvy.progress.Progress
 import opensavvy.progress.done
@@ -76,8 +78,8 @@ fun FloatingActionButton(
 	progress: Progress = done(),
 	showLabel: Boolean = true,
 	showIcon: Boolean = true,
-	theme: FloatingActionButtonTheme = FloatingActionButtonTheme.PrimaryColor,
-	size: FloatingActionButtonSize = FloatingActionButtonSize.Regular,
+	theme: FloatingActionButtonTheme = PrimaryColor,
+	size: FloatingActionButtonSize = Regular,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 	icon: @Composable () -> Unit,
 ) {
@@ -85,18 +87,20 @@ fun FloatingActionButton(
 		tooltip?.let(::title)
 		onClick { action() }
 
-		when (theme) {
-			FloatingActionButtonTheme.PrimaryColor -> classes("bg-primary-container", "text-primary-container-on")
-			FloatingActionButtonTheme.SecondaryColor -> classes("bg-secondary-container", "text-secondary-container-on")
-			FloatingActionButtonTheme.TertiaryColor -> classes("bg-tertiary-container", "text-tertiary-container-on")
-			FloatingActionButtonTheme.SurfaceColor -> classes("bg-surface-container", "text-surface-container-on")
-		}
-
-		when (size) {
-			FloatingActionButtonSize.Regular -> classes("p-2")
-			FloatingActionButtonSize.Small -> classes("p-1")
-			FloatingActionButtonSize.Large -> classes("text-xl", "p-4")
-		}
+		classes(
+			"mdk-fab",
+			when (theme) {
+				PrimaryColor -> "mdk-fab-color-primary"
+				SecondaryColor -> "mdk-fab-color-secondary"
+				TertiaryColor -> "mdk-fab-color-tertiary"
+				SurfaceColor -> "mdk-fab-color-surface"
+			},
+			when (size) {
+				Regular -> "mdk-fab-regular"
+				Small -> "mdk-fab-small"
+				Large -> "mdk-fab-large"
+			}
+		)
 
 		attrs()
 	}) {

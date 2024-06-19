@@ -1,0 +1,19 @@
+.mdk-card {
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+}
+
+.mdk-card-elevated {
+	background-color: var(--mdk-surface-cont-low);
+	color: var(--mdk-surface-on);
+}
+
+.mdk-card-filled {
+	background-color: var(--mdk-surface-cont-highest);
+	color: var(--mdk-surface-on);
+}
+
+.mdk-card-outlined {
+	outline: var(--mdk-outline-variant) solid .25rem;
+}

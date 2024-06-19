@@ -22,13 +22,11 @@ kotlin {
 	val jsMain by sourceSets.getting {
 		dependencies {
 			implementation(projects.components)
-
-			implementation(devNpm("postcss", libs.versions.postcss.get()))
-			implementation(devNpm("autoprefixer", libs.versions.autoprefixer.get()))
 		}
 	}
 }
 
 dependencies {
-	transitiveJsResources(projects.tailwindcss)
+	transitiveJsResources(projects.theme)
+	transitiveJsResources(projects.components)
 }

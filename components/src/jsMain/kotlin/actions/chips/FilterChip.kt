@@ -64,7 +64,7 @@ fun FilterChip(
 		if (!enabled)
 			this.disabled()
 
-		classes("bg-blue-500")
+		classes("mdk-chip-filter")
 
 		attrs()
 	}) {

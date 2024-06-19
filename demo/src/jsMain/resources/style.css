@@ -1,6 +1,53 @@
 /* noinspection CssUnknownTarget IDEA doesn't know the folder exists */
-@import "imported/material-colors.css";
+@import "imported/mdk.css";
+@import "imported/mdk-components.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* region Reset */
+
+body {
+	margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+/* endregion */
+/* region Style of components for the demo */
+
+article {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+h1 {
+	font-size: xxx-large;
+	padding-top: 2rem;
+	font-weight: 800;
+}
+
+h2 {
+	font-size: x-large;
+	padding-top: 2rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: larger;
+	margin-bottom: .5rem;
+}
+
+h4 {
+	font-size: large;
+}
+
+.demo-cards {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+/* endregion */
