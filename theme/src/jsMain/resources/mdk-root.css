@@ -12,3 +12,8 @@
 	transition-duration: 150ms;
 	transition-delay: 100ms;
 }
+
+::selection {
+	background-color: var(--mdk-primary-cont);
+	color: var(--mdk-primary-cont-on);
+}
