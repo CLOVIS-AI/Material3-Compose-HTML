@@ -1,3 +1,22 @@
 .mdk-button-elevated {
-	background-color: darkmagenta;
+	outline: none;
+
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+	background-color: var(--mdk-surface-cont-low);
+	color: var(--mdk-primary);
+}
+
+.mdk-button-elevated:disabled {
+	box-shadow: none;
+	background-color: color-mix(in srgb, var(--mdk-surface-on) 12%, transparent);
+	color: color-mix(in srgb, var(--mdk-surface-on) 38%, transparent);
+}
+
+.mdk-button-elevated:hover:not(:disabled) {
+	background-color: color-mix(in srgb, var(--mdk-primary) 8%, var(--mdk-surface-cont-low));
+}
+
+.mdk-button-elevated:focus:not(:disabled) {
+	background-color: color-mix(in srgb, var(--mdk-primary) 10%, var(--mdk-surface-cont-low));
 }
