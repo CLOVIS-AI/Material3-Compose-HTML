@@ -10,6 +10,7 @@ import opensavvy.material3.tailwind.demo.components.actions.FloatingActionButton
 import opensavvy.material3.tailwind.demo.components.communication.LoadingIndicators
 import opensavvy.material3.tailwind.demo.components.containment.Cards
 import opensavvy.material3.tailwind.demo.components.containment.Dividers
+import opensavvy.material3.tailwind.demo.components.inputs.Fields
 import opensavvy.material3.tailwind.demo.components.selection.Checkboxes
 import opensavvy.material3.tailwind.demo.components.selection.Switches
 import opensavvy.material3.tailwind.demo.utils.SchemeSelector
@@ -37,6 +38,7 @@ fun main() {
 			Dividers()
 			Switches()
 			Checkboxes()
+			Fields()
 		}
 	}
 }
