@@ -1,8 +1,11 @@
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+
 plugins {
 	alias(opensavvyConventions.plugins.base)
 	alias(opensavvyConventions.plugins.kotlin.library)
 }
 
+@OptIn(ExperimentalWasmDsl::class)
 kotlin {
 	jvm()
 	js {
@@ -13,18 +16,20 @@ kotlin {
 	iosArm64()
 	iosSimulatorArm64()
 	iosX64()
+	wasmJs {
+		browser()
+		nodejs()
+	}
+	wasmWasi {
+		nodejs()
+	}
 
 	sourceSets.commonTest.dependencies {
-		implementation(opensavvyConventions.aligned.kotlin.test.annotations)
-		implementation(opensavvyConventions.aligned.kotlin.test.common)
+		implementation(opensavvyConventions.aligned.kotlin.test)
 	}
 
 	sourceSets.jvmTest.dependencies {
 		implementation(opensavvyConventions.aligned.kotlin.test.junit5)
-	}
-
-	sourceSets.jsTest.dependencies {
-		implementation(opensavvyConventions.aligned.kotlin.test.js)
 	}
 }
 
@@ -49,6 +54,10 @@ if (appGroup != "dev.opensavvy.playground") {
 	tasks.configureEach {
 		if (name.startsWith("publish")) {
 			onlyIf("Publishing is only enabled when built as part of the Playground") { false }
+		}
+
+		if (this is Test) {
+			onlyIf("The template tests do not need to run when not building as part of the Playground") { System.getenv("CI") != null }
 		}
 	}
 }
