@@ -19,6 +19,7 @@ kotlin {
 			api(compose.html.core)
 			implementation(compose.html.svg)
 
+			api(libs.kotlinx.coroutines)
 			api(libs.pedestal.progress)
 		}
 

@@ -1,6 +1,7 @@
 # List of dependencies of the project
 
 [versions]
+coroutines = "1.8.1"           # https://github.com/Kotlin/kotlinx.coroutines/releases
 pedestal = "2.1.0"             # https://gitlab.com/opensavvy/pedestal/-/releases
 kotlin-vite = "0.3.6"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
 kotlin-js-resources = "0.2.3"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
@@ -11,6 +12,7 @@ resources-producer = { id = "dev.opensavvy.resources.producer", version.ref = "k
 resources-consumer = { id = "dev.opensavvy.resources.consumer", version.ref = "kotlin-js-resources" }
 
 [libraries]
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 pedestal-progress = { module = "dev.opensavvy.pedestal:progress", version.ref = "pedestal" }
 
 [bundles]
