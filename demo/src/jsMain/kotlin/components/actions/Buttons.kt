@@ -2,7 +2,7 @@ package opensavvy.material3.tailwind.demo.components.actions
 
 import androidx.compose.runtime.Composable
 import kotlinx.browser.window
-import opensavvy.material3.tailwind.actions.buttons.*
+import opensavvy.material3.html.actions.buttons.*
 import opensavvy.material3.tailwind.demo.utils.Section
 import opensavvy.material3.tailwind.demo.utils.named
 import opensavvy.material3.tailwind.demo.utils.progress

@@ -1,8 +1,8 @@
-package opensavvy.material3.tailwind.communication.progress
+package opensavvy.material3.html.communication.progress
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.ExperimentalComponent
-import opensavvy.material3.tailwind.UnfinishedComponent
+import opensavvy.material3.html.ExperimentalComponent
+import opensavvy.material3.html.UnfinishedComponent
 import opensavvy.progress.Progress
 import org.jetbrains.compose.web.dom.Text
 

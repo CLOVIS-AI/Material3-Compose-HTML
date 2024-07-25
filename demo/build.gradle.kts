@@ -16,8 +16,8 @@ kotlin {
 	}
 
 	sourceSets.all {
-		languageSettings.optIn("opensavvy.material3.tailwind.ExperimentalComponent")
-		languageSettings.optIn("opensavvy.material3.tailwind.UnfinishedComponent")
+		languageSettings.optIn("opensavvy.material3.html.ExperimentalComponent")
+		languageSettings.optIn("opensavvy.material3.html.UnfinishedComponent")
 	}
 
 	val jsMain by sourceSets.getting {

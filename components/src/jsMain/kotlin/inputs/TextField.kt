@@ -1,8 +1,8 @@
-package opensavvy.material3.tailwind.inputs
+package opensavvy.material3.html.inputs
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.ExperimentalComponent
-import opensavvy.material3.tailwind.UnfinishedComponent
+import opensavvy.material3.html.ExperimentalComponent
+import opensavvy.material3.html.UnfinishedComponent
 import org.jetbrains.compose.web.attributes.disabled
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Label

@@ -1,9 +1,9 @@
 package opensavvy.material3.tailwind.demo.components.containment
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.communication.progress.LinearProgressIndicator
-import opensavvy.material3.tailwind.containment.card.Card
-import opensavvy.material3.tailwind.containment.card.CardStyle
+import opensavvy.material3.html.communication.progress.LinearProgressIndicator
+import opensavvy.material3.html.containment.card.Card
+import opensavvy.material3.html.containment.card.CardStyle
 import opensavvy.material3.tailwind.demo.utils.Section
 import opensavvy.material3.tailwind.demo.utils.progress
 import opensavvy.material3.tailwind.demo.utils.rememberParameters

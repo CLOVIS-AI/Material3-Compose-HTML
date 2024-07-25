@@ -4,7 +4,7 @@ import androidx.compose.runtime.*
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import opensavvy.material3.tailwind.actions.chips.*
+import opensavvy.material3.html.actions.chips.*
 import opensavvy.material3.tailwind.demo.utils.Section
 import opensavvy.material3.tailwind.demo.utils.named
 import opensavvy.material3.tailwind.demo.utils.progress

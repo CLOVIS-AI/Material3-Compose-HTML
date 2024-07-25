@@ -1,4 +1,4 @@
-package opensavvy.material3.tailwind
+package opensavvy.material3.html
 
 /**
  * Marks a component as experimental.

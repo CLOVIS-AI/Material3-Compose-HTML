@@ -3,8 +3,8 @@ package opensavvy.material3.tailwind.demo.components.communication
 import androidx.compose.runtime.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
-import opensavvy.material3.tailwind.communication.progress.CircularProgressIndicator
-import opensavvy.material3.tailwind.communication.progress.LinearProgressIndicator
+import opensavvy.material3.html.communication.progress.CircularProgressIndicator
+import opensavvy.material3.html.communication.progress.LinearProgressIndicator
 import opensavvy.material3.tailwind.demo.utils.Section
 import opensavvy.progress.Progress
 import opensavvy.progress.done

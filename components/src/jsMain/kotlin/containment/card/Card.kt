@@ -1,9 +1,9 @@
-package opensavvy.material3.tailwind.containment.card
+package opensavvy.material3.html.containment.card
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.ExperimentalComponent
-import opensavvy.material3.tailwind.UnfinishedComponent
-import opensavvy.material3.tailwind.containment.card.CardStyle.*
+import opensavvy.material3.html.ExperimentalComponent
+import opensavvy.material3.html.UnfinishedComponent
+import opensavvy.material3.html.containment.card.CardStyle.*
 import org.jetbrains.compose.web.attributes.AttrsScope
 import org.jetbrains.compose.web.dom.Article
 import org.w3c.dom.HTMLElement
