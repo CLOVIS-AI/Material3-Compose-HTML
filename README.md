@@ -39,7 +39,7 @@ Actions:
 
 Communication:
 
-- Badges: #24, #25
+- Badges: #25
 - Linear progress indicator
 - Circular progress indicator: #87, #89
 - Snackbar: #28, #29

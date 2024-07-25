@@ -1,0 +1,34 @@
+
+.mdk-badge-anchor {
+	position: relative;
+	max-width: fit-content;
+}
+
+.mdk-badge {
+	position: absolute;
+	background: var(--mdk-error);
+	color: var(--mdk-error-on);
+
+	border-radius: 999px;
+	font-size: 80%;
+}
+
+/**
+ * Small variant: no label is displayed.
+ */
+.mdk-badge-small {
+	top: -.2rem;
+	right: -.5rem;
+	width: .4rem;
+	height: .4rem;
+}
+
+/**
+ * Large variant: a label is displayed.
+ */
+.mdk-badge-large {
+	top: -.5rem;
+	right: -1rem;
+	padding-left: .4rem;
+	padding-right: .4rem;
+}
