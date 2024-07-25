@@ -1,4 +1,4 @@
-package opensavvy.material3.tailwind.demo.utils
+package opensavvy.material3.demo.utils
 
 import androidx.compose.runtime.Composable
 import opensavvy.material3.html.actions.chips.ChipGroup

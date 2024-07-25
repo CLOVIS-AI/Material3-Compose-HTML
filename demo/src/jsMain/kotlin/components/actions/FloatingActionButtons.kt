@@ -1,4 +1,4 @@
-package opensavvy.material3.tailwind.demo.components.actions
+package opensavvy.material3.demo.components.actions
 
 import androidx.compose.runtime.Composable
 import kotlinx.browser.window
@@ -6,10 +6,10 @@ import opensavvy.material3.html.actions.buttons.ButtonGroup
 import opensavvy.material3.html.actions.fab.FloatingActionButton
 import opensavvy.material3.html.actions.fab.FloatingActionButtonSize
 import opensavvy.material3.html.actions.fab.FloatingActionButtonTheme
-import opensavvy.material3.tailwind.demo.utils.Section
-import opensavvy.material3.tailwind.demo.utils.named
-import opensavvy.material3.tailwind.demo.utils.progress
-import opensavvy.material3.tailwind.demo.utils.rememberParameters
+import opensavvy.material3.demo.utils.Section
+import opensavvy.material3.demo.utils.named
+import opensavvy.material3.demo.utils.progress
+import opensavvy.material3.demo.utils.rememberParameters
 import org.jetbrains.compose.web.dom.Text
 
 @Composable

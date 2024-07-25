@@ -1,14 +1,13 @@
-package opensavvy.material3.tailwind.demo.components.selection
+package opensavvy.material3.demo.components.selection
 
 import androidx.compose.runtime.*
+import opensavvy.material3.demo.utils.Section
+import opensavvy.material3.demo.utils.named
+import opensavvy.material3.demo.utils.rememberParameters
 import opensavvy.material3.html.selection.Checkbox
 import opensavvy.material3.html.selection.Tristate
-import opensavvy.material3.tailwind.demo.utils.Section
-import opensavvy.material3.tailwind.demo.utils.named
-import opensavvy.material3.tailwind.demo.utils.rememberParameters
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.marginLeft
-import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Label
 import org.jetbrains.compose.web.dom.Text
