@@ -10,9 +10,11 @@ include:
   - remote: https://gitlab.com/opensavvy/ci-templates/-/raw/main/gradle.gitlab-ci.yml
   - remote: https://gitlab.com/opensavvy/ci-templates/-/raw/main/docker.gitlab-ci.yml
 
+  - local: docs/website/.gitlab-ci.yml
+
 variables:
   # https://gitlab.com/opensavvy/automation/containers
-  ci_containers: 0.4.0
+  ci_containers: 0.4.4
 
 workflow:
   rules:
@@ -63,12 +65,27 @@ check[jvm]:
   script:
     - >
       ./gradlew check
+      :koverLog
+      :koverHtmlReport
       -x jsBrowserTest
       -x jsNodeTest
+      -x wasmJsBrowserTest
+      -x wasmJsNodeTest
+      -x wasmWasiNodeTest
       -x linuxX64Test
       -x iosSimulatorArm64Test
+      koverVerify --rerun
       -PappVersion=$project_version
 
+  after_script:
+    - mkdir -p jvm-cover-report
+    - mv build/reports/kover/html/* jvm-cover-report
+
+  coverage: '/application line coverage: (\d+\.?\d*%)/'
+  artifacts:
+    paths:
+      - jvm-cover-report
+    expose_as: JVM code coverage
   interruptible: true
 
 check[jsBrowser]:
@@ -77,7 +94,7 @@ check[jsBrowser]:
 
   script:
     - >
-      ./gradlew jsBrowserTest
+      ./gradlew jsBrowserTest wasmJsBrowserTest
       -PappVersion=$project_version
 
   interruptible: true
@@ -88,7 +105,7 @@ check[nodeJs]:
 
   script:
     - >
-      ./gradlew jsNodeTest
+      ./gradlew jsNodeTest wasmJsNodeTest wasmWasiNodeTest
       -PappVersion=$project_version
 
   interruptible: true
@@ -184,7 +201,7 @@ publish-maven:gitlab[ios]:
       publishIosX64PublicationToGitLabRepository
       --no-configuration-cache
       -PappVersion=$project_version
-      
+
   interruptible: false
   rules:
     - if: $PUBLISH_MAVEN == "no" || $PUBLISH_MAVEN_GITLAB == "no" || $PUBLISH_MAVEN_IOS == "no"
@@ -345,12 +362,15 @@ pages:
   image: alpine:latest
   stage: deploy
   needs:
+    - job: mkdocs
+      artifacts: true
     - job: dokka
       artifacts: true
     - job: demo:build
 
   script:
     - mkdir -p public
+    - mv docs-website public/docs
     - mv api-docs public
     - mv website public/demo
 
