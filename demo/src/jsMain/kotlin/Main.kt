@@ -13,6 +13,7 @@ import opensavvy.material3.demo.components.containment.Dividers
 import opensavvy.material3.demo.components.inputs.Fields
 import opensavvy.material3.demo.components.selection.Checkboxes
 import opensavvy.material3.demo.components.selection.Switches
+import opensavvy.material3.demo.components.communication.Badges
 import opensavvy.material3.demo.utils.SchemeSelector
 import opensavvy.material3.theme.ColorScheme
 import opensavvy.material3.theme.InstallColorScheme
@@ -33,6 +34,7 @@ fun main() {
 			Buttons()
 			FloatingActionButtons()
 			Chips()
+			Badges()
 			LoadingIndicators()
 			Cards()
 			Dividers()
