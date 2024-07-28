@@ -1,4 +1,4 @@
-package opensavvy.material3.tailwind.actions.fab
+package opensavvy.material3.html.actions.fab
 
 enum class FloatingActionButtonTheme {
 	PrimaryColor,

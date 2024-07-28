@@ -1,4 +1,4 @@
-package opensavvy.material3.tailwind.inputs
+package opensavvy.material3.html.inputs
 
 /**
  * The different visual styles for input fields.

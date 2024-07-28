@@ -1,10 +1,10 @@
-package opensavvy.material3.tailwind.demo.components.selection
+package opensavvy.material3.demo.components.selection
 
 import androidx.compose.runtime.*
-import opensavvy.material3.tailwind.demo.utils.Section
-import opensavvy.material3.tailwind.demo.utils.named
-import opensavvy.material3.tailwind.demo.utils.rememberParameters
-import opensavvy.material3.tailwind.selection.Switch
+import opensavvy.material3.html.selection.Switch
+import opensavvy.material3.demo.utils.Section
+import opensavvy.material3.demo.utils.named
+import opensavvy.material3.demo.utils.rememberParameters
 
 @Composable
 fun Switches() = Section("Switch") {

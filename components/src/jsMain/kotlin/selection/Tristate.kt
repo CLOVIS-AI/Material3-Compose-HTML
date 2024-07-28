@@ -1,4 +1,4 @@
-package opensavvy.material3.tailwind.selection
+package opensavvy.material3.html.selection
 
 /**
  * A simple tristate: [Active], [Inactive] or [Indeterminate].

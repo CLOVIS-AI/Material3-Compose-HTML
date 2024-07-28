@@ -1,9 +1,9 @@
-package opensavvy.material3.tailwind.actions.buttons
+package opensavvy.material3.html.actions.buttons
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import opensavvy.material3.tailwind.ExperimentalComponent
-import opensavvy.material3.tailwind.UnfinishedComponent
+import opensavvy.material3.html.ExperimentalComponent
+import opensavvy.material3.html.UnfinishedComponent
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope

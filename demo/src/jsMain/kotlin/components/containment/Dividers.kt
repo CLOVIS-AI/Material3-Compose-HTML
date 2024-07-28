@@ -1,9 +1,9 @@
-package opensavvy.material3.tailwind.demo.components.containment
+package opensavvy.material3.demo.components.containment
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.containment.dividers.Divider
-import opensavvy.material3.tailwind.containment.dividers.InsetDivider
-import opensavvy.material3.tailwind.demo.utils.Section
+import opensavvy.material3.html.containment.dividers.Divider
+import opensavvy.material3.html.containment.dividers.InsetDivider
+import opensavvy.material3.demo.utils.Section
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 

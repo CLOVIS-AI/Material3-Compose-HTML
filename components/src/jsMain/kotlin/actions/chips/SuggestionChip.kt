@@ -1,9 +1,9 @@
-package opensavvy.material3.tailwind.actions.chips
+package opensavvy.material3.html.actions.chips
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.ExperimentalComponent
-import opensavvy.material3.tailwind.UnfinishedComponent
-import opensavvy.material3.tailwind.communication.progress.CircularProgressIndicator
+import opensavvy.material3.html.ExperimentalComponent
+import opensavvy.material3.html.UnfinishedComponent
+import opensavvy.material3.html.communication.progress.CircularProgressIndicator
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope

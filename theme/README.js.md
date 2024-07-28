@@ -2,7 +2,7 @@
 
 CSS utilities to declare color themes, etc.
 
-<a href="https://search.maven.org/search?q=dev.opensavvy.material3.tailwind.html"><img src="https://img.shields.io/maven-central/v/dev.opensavvy.material3.html/theme.svg?label=Maven%20Central"></a>
+<a href="https://search.maven.org/search?q=dev.opensavvy.material3.html.theme"><img src="https://img.shields.io/maven-central/v/dev.opensavvy.material3.html/theme.svg?label=Maven%20Central"></a>
 
 ## Design tokens
 

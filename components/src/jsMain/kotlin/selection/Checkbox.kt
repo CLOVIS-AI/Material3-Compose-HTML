@@ -1,8 +1,8 @@
-package opensavvy.material3.tailwind.selection
+package opensavvy.material3.html.selection
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.ExperimentalComponent
-import opensavvy.material3.tailwind.UnfinishedComponent
+import opensavvy.material3.html.ExperimentalComponent
+import opensavvy.material3.html.UnfinishedComponent
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.attributes.builders.InputAttrsScope
 import org.jetbrains.compose.web.attributes.disabled

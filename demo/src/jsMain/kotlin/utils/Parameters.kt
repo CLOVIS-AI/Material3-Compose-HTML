@@ -1,15 +1,15 @@
-package opensavvy.material3.tailwind.demo.utils
+package opensavvy.material3.demo.utils
 
 import androidx.compose.runtime.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import opensavvy.material3.tailwind.actions.chips.AssistChip
-import opensavvy.material3.tailwind.actions.chips.ChipGroup
-import opensavvy.material3.tailwind.actions.chips.FilterChip
-import opensavvy.material3.tailwind.actions.fab.FloatingActionButtonSize
-import opensavvy.material3.tailwind.inputs.FieldStyle
-import opensavvy.material3.tailwind.selection.Checkbox
+import opensavvy.material3.html.actions.chips.AssistChip
+import opensavvy.material3.html.actions.chips.ChipGroup
+import opensavvy.material3.html.actions.chips.FilterChip
+import opensavvy.material3.html.actions.fab.FloatingActionButtonSize
+import opensavvy.material3.html.inputs.FieldStyle
+import opensavvy.material3.html.selection.Checkbox
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import opensavvy.progress.loading

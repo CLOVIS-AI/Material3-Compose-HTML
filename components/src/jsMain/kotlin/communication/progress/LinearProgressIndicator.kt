@@ -1,4 +1,4 @@
-package opensavvy.material3.tailwind.communication.progress
+package opensavvy.material3.html.communication.progress
 
 import androidx.compose.runtime.*
 import kotlinx.coroutines.delay

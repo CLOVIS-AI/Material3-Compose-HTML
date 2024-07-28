@@ -1,11 +1,11 @@
-package opensavvy.material3.tailwind.demo.components.inputs
+package opensavvy.material3.demo.components.inputs
 
 import androidx.compose.runtime.*
-import opensavvy.material3.tailwind.demo.utils.Section
-import opensavvy.material3.tailwind.demo.utils.named
-import opensavvy.material3.tailwind.demo.utils.rememberParameters
-import opensavvy.material3.tailwind.inputs.FieldStyle
-import opensavvy.material3.tailwind.inputs.TextField
+import opensavvy.material3.html.inputs.FieldStyle
+import opensavvy.material3.html.inputs.TextField
+import opensavvy.material3.demo.utils.Section
+import opensavvy.material3.demo.utils.named
+import opensavvy.material3.demo.utils.rememberParameters
 import org.jetbrains.compose.web.dom.Text
 
 @Composable

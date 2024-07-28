@@ -1,7 +1,7 @@
-package opensavvy.material3.tailwind.containment.dividers
+package opensavvy.material3.html.containment.dividers
 
 import androidx.compose.runtime.Composable
-import opensavvy.material3.tailwind.ExperimentalComponent
+import opensavvy.material3.html.ExperimentalComponent
 import org.jetbrains.compose.web.attributes.AttrsScope
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Hr
