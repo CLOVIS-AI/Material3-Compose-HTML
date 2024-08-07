@@ -32,6 +32,7 @@ fun main() {
 					Text("Material3 for Compose HTML")
 				}
 
+				Intro()
 				SchemeSelector(scheme, onSelect = { scheme = it })
 				Buttons()
 				FloatingActionButtons()
