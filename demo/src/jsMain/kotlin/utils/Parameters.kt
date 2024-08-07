@@ -41,7 +41,6 @@ class Parameters(
 		P({
 			style {
 				marginTop(0.5.cssRem)
-				marginBottom(0.5.cssRem)
 			}
 		}) {
 			Text("States:")
@@ -49,7 +48,7 @@ class Parameters(
 
 		Div({
 			style {
-				marginLeft(0.5.cssRem)
+				marginLeft(1.cssRem)
 			}
 		}) {
 			for (parameter in parameters.values)
@@ -103,8 +102,8 @@ private class Parameter<T: Any>(
 			}
 			Boolean::class -> Checkbox(state as Boolean, { state = it as T })
 			Progress::class -> {
-				Text(state.toString())
 				ChipGroup {
+					Text(state.toString())
 					AssistChip("Done", onClick = { state = done() as T })
 					AssistChip("Indeterminate", onClick = { state = loading() as T })
 					AssistChip("33%", onClick = { state = loading(0.33) as T })

@@ -19,12 +19,13 @@ p, h1, h2, h3, h4, h5, h6 {
 article {
 	display: flex;
 	flex-direction: column;
-	gap: .5rem;
+	gap: .75rem;
 }
 
 h1 {
 	font-size: xxx-large;
 	padding-top: 2rem;
+	margin-bottom: 1.5rem;
 	font-weight: 800;
 }
 
@@ -48,6 +49,30 @@ h4 {
 	display: flex;
 	flex-direction: column;
 	gap: .5rem;
+}
+
+a {
+	color: var(--mdk-primary);
+}
+
+a:hover {
+	color: var(--mdk-primary);
+}
+
+a:visited {
+	color: var(--mdk-secondary);
+}
+
+/* endregion */
+/* region Overall page */
+
+.mdk-root {
+	padding: 32px;
+	font-family: Roboto, "Open Sans", "Droid Sans", Helvetica, sans-serif;
+}
+
+p {
+	max-width: 55rem;
 }
 
 /* endregion */
