@@ -17,6 +17,7 @@
 @import "communication/badges/Badge.css";
 @import "communication/progress/CircularProgressIndicator.css";
 @import "communication/progress/LinearProgressIndicator.css";
+@import "communication/snackbar/SnackbarHost.css";
 
 @import "containment/card/Card.css";
 @import "containment/dividers/Divider.css";

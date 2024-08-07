@@ -15,6 +15,7 @@ import opensavvy.material3.demo.components.selection.Checkboxes
 import opensavvy.material3.demo.components.selection.Switches
 import opensavvy.material3.demo.components.communication.Badges
 import opensavvy.material3.demo.utils.SchemeSelector
+import opensavvy.material3.html.communication.snackbar.SnackbarHost
 import opensavvy.material3.theme.ColorScheme
 import opensavvy.material3.theme.InstallColorScheme
 import org.jetbrains.compose.web.dom.H1
@@ -26,21 +27,23 @@ fun main() {
 		var scheme by remember { mutableStateOf(ColorScheme.System) }
 
 		InstallColorScheme(scheme) {
-			H1 {
-				Text("Material3 for Compose HTML")
-			}
+			SnackbarHost {
+				H1 {
+					Text("Material3 for Compose HTML")
+				}
 
-			SchemeSelector(scheme, onSelect = { scheme = it })
-			Buttons()
-			FloatingActionButtons()
-			Chips()
-			Badges()
-			LoadingIndicators()
-			Cards()
-			Dividers()
-			Switches()
-			Checkboxes()
-			Fields()
+				SchemeSelector(scheme, onSelect = { scheme = it })
+				Buttons()
+				FloatingActionButtons()
+				Chips()
+				Badges()
+				LoadingIndicators()
+				Cards()
+				Dividers()
+				Switches()
+				Checkboxes()
+				Fields()
+			}
 		}
 	}
 }

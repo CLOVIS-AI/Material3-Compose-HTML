@@ -49,6 +49,14 @@ Floating Action Buttons (FABs) are large buttons that let the user trigger the m
 
 Indicators to communicate the progress of an ongoing operation to the user.
 
+# Package opensavvy.material3.html.communication.snackbar
+
+Snackbars indicate the result of an operation.
+
+- [SnackbarHost][opensavvy.material3.html.communication.snackbar.SnackbarHost] must be added near the root of the screen. Snackbars will be visible in its contents.
+- [rememberSnackbarCreator][opensavvy.material3.html.communication.snackbar.rememberSnackbarCreator] is used to obtain a `SnackbarCreator`.
+- [SnackbarCreator.create][opensavvy.material3.html.communication.snackbar.SnackbarCreator.create] to create a new snackbar.
+
 # Package opensavvy.material3.html.containment.card
 
 Group related information into a cohesive unit.
