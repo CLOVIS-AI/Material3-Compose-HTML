@@ -1,7 +1,7 @@
 .mdk-button-elevated {
 	outline: none;
 
-	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	box-shadow:  3px 2px 2px  color-mix(in srgb, var(--mdk-shadow) 10%, transparent), 0 0 15em color-mix(in srgb, var(--mdk-shadow) 10%, transparent);
 
 	background-color: var(--mdk-surface-cont-low);
 	color: var(--mdk-primary);
