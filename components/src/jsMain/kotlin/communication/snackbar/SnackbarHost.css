@@ -1,0 +1,34 @@
+.mdk-snackbar-host {
+	position: relative;
+}
+
+.mdk-snackbar {
+	/* Positioning */
+	position: sticky;
+	bottom: 16px;
+	margin: 16px;
+	padding: 16px 25px;
+
+	/* Appearance */
+	background-color: var(--mdk-surface-inverse);
+	color: var(--mdk-surface-inverse-on);
+	border-radius: .25rem;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+	/* Animate appearance and disappearance */
+	/* noinspection CssUnresolvedCustomProperty */
+	opacity: var(--mdk-snackbar-opacity);
+	transition-property: opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+
+	/* Contents */
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	align-items: baseline;
+}
+
+.mdk-snackbar > p {
+	flex-grow: 1;
+}

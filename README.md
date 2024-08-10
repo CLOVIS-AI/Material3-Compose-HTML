@@ -42,7 +42,7 @@ Communication:
 - Badges: #25
 - Linear progress indicator
 - Circular progress indicator: #87, #89
-- Snackbar: #28, #29
+- Snackbar: #29
 - Tooltips: #44, #45
 
 Containment:
