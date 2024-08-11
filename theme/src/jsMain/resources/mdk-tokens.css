@@ -1,0 +1,11 @@
+
+@layer mdk-tokens {
+	:root {
+		/* region State layers */
+
+		--mdk-state-hover-opacity: 8%;
+		--mdk-state-focus-opacity: 10%
+
+		/* endregion */
+	}
+}

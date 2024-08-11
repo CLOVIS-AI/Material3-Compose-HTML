@@ -14,9 +14,9 @@
 }
 
 .mdk-button-elevated:hover:not(:disabled) {
-	background-color: color-mix(in srgb, var(--mdk-primary) 8%, var(--mdk-surface-cont-low));
+	background-color: color-mix(in srgb, var(--mdk-primary) var(--mdk-state-hover-opacity), var(--mdk-surface-cont-low));
 }
 
 .mdk-button-elevated:focus:not(:disabled) {
-	background-color: color-mix(in srgb, var(--mdk-primary) 10%, var(--mdk-surface-cont-low));
+	background-color: color-mix(in srgb, var(--mdk-primary) var(--mdk-state-focus-opacity), var(--mdk-surface-cont-low));
 }

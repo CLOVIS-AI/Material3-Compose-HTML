@@ -12,9 +12,9 @@
 }
 
 .mdk-button-filled:hover:not(:disabled) {
-	background-color: color-mix(in srgb, var(--mdk-primary-on) 8%, var(--mdk-primary));
+	background-color: color-mix(in srgb, var(--mdk-primary-on) var(--mdk-state-hover-opacity), var(--mdk-primary));
 }
 
 .mdk-button-filled:focus:not(:disabled) {
-	background-color: color-mix(in srgb, var(--mdk-primary-on) 10%, var(--mdk-primary));
+	background-color: color-mix(in srgb, var(--mdk-primary-on) var(--mdk-state-focus-opacity), var(--mdk-primary));
 }
