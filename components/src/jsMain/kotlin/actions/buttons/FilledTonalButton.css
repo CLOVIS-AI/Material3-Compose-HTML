@@ -1,8 +1,7 @@
 .mdk-button-filled-tonal {
-outline: none;
-	background-color:  var(--mdk-secondary-cont);
+	outline: none;
+	background-color: var(--mdk-secondary-cont);
 	color: var(--mdk-secondary);
-
 }
 
 .mdk-button-filled-tonal:disabled {
@@ -11,14 +10,11 @@ outline: none;
 }
 
 .mdk-button-filled-tonal:hover:not(:disabled) {
-	background-color: color-mix(in srgb,  var(--mdk-secondary) 8%, var(--mdk-secondary-cont));
-	box-shadow:  3px 2px 2px  color-mix(in srgb, var(--mdk-shadow) 10%, transparent), 0 0 15em color-mix(in srgb, var(--mdk-shadow) 10%, transparent);
+	background-color: color-mix(in srgb, var(--mdk-secondary) 8%, var(--mdk-secondary-cont));
+	box-shadow: 3px 2px 2px color-mix(in srgb, var(--mdk-shadow) 10%, transparent), 0 0 15em color-mix(in srgb, var(--mdk-shadow) 10%, transparent);
 
 }
 
 .mdk-button-filled-tonal:focus:not(:disabled) {
-	/* background-color: color-mix(in srgb, var(--mdk-secondary-cont) 10%, var(--mdk-secondary)); */
 	background-color: color-mix(in srgb, var(--mdk-secondary) 10%, var(--mdk-secondary-cont));
 }
-
-
