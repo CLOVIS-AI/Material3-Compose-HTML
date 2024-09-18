@@ -1,0 +1,16 @@
+.mdk-chip {
+	outline: none;
+
+	display: flex;
+	flex-direction: row;
+	gap: .5em;
+	justify-content: space-evenly;
+
+	transition-property: width, border-color, background-color, color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+
+.mdk-chip-leading, .mdk-chip-trailing {
+	min-width: .25em;
+}

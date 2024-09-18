@@ -6,6 +6,7 @@
 @import "actions/buttons/OutlinedButton.css";
 @import "actions/buttons/TextButton.css";
 
+@import "actions/chips/AbstractChip.css";
 @import "actions/chips/AssistChip.css";
 @import "actions/chips/ChipGroup.css";
 @import "actions/chips/FilterChip.css";

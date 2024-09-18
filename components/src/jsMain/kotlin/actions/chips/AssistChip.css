@@ -1,3 +1,29 @@
 .mdk-chip-assist {
-	background-color: darkblue;
+	color: var(--mdk-surface-on);
+	border-color: var(--mdk-outline-variant);
+	border-radius: var(--mdk-corner-small);
+	border-width: 1px;
+	border-style: solid;
+
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+	background-color: transparent;
+}
+
+.mdk-chip-assist:disabled {
+	color: color-mix(in srgb, var(--mdk-surface-on) 38%, transparent);
+	border-color: var(--mdk-surface-on);
+}
+
+.mdk-chip-assist:not(:disabled) > .mdk-chip-leading {
+	color: var(--mdk-primary);
+}
+
+.mdk-chip-assist:hover {
+	background-color: color-mix(in srgb, var(--mdk-surface-on) var(--mdk-state-hover-opacity), transparent);
+}
+
+.mdk-chip-assist:focus {
+	background-color: color-mix(in srgb, var(--mdk-secondary) var(--mdk-state-focus-opacity), transparent);
 }
