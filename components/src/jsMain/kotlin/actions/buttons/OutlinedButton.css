@@ -1,3 +1,21 @@
 .mdk-button-outlined {
-	background-color: darkblue;
+
+	outline: none;
+
+	color: var(--mdk-primary);
+	background-color: transparent;
+	border: 1px solid var(--mdk-outline);
+}
+
+.mdk-button-outlined:disabled{
+	color: color-mix(in srgb, var(--mdk-surface-on) 38%, transparent);
+	border: 1px solid color-mix(in srgb, var(--mdk-surface-on) 12%, transparent);
+}
+
+.mdk-button-outlined:hover:not(:disabled){
+	background-color: color-mix(in srgb, var(--mdk-primary) var(--mdk-state-hover-opacity), transparent);
+}
+
+.mdk-button-outlined:focus:not(:disabled) {
+	background-color: color-mix(in srgb, var(--mdk-primary) var(--mdk-state-hover-opacity), transparent);
 }
