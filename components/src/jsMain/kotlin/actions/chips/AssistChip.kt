@@ -3,12 +3,9 @@ package opensavvy.material3.html.actions.chips
 import androidx.compose.runtime.Composable
 import opensavvy.material3.html.ExperimentalComponent
 import opensavvy.material3.html.UnfinishedComponent
-import opensavvy.material3.html.communication.progress.CircularProgressIndicator
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope
-import org.jetbrains.compose.web.attributes.disabled
-import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLButtonElement
 
@@ -57,21 +54,15 @@ fun AssistChip(
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
-	Button({
-		this.onClick { onClick() }
-
-		if (!enabled)
-			this.disabled()
-
-		classes("mdk-chip-assist")
-
-		attrs()
-	}) {
-		if (progress is Progress.Loading)
-			CircularProgressIndicator(progress)
-		else if (icon != null)
-			icon()
-
-		Text(label)
-	}
+	AbstractChip(
+		enabled = enabled,
+		progress = progress,
+		leading = { icon?.invoke() },
+		main = { Text(label) },
+		attrs = {
+			classes("mdk-chip-assist")
+			onClick { onClick() }
+			attrs()
+		}
+	)
 }
