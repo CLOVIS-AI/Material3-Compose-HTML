@@ -23,6 +23,7 @@ kotlin {
 	val jsMain by sourceSets.getting {
 		dependencies {
 			implementation(projects.components)
+			implementation(projects.themeDynamic)
 		}
 	}
 }
