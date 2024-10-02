@@ -58,5 +58,6 @@ include(
 
 	"demo",
 	"theme",
+	"theme-dynamic",
 	"components",
 )

@@ -2,6 +2,8 @@ package opensavvy.material3.demo
 
 import androidx.compose.runtime.*
 import kotlinx.browser.localStorage
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import opensavvy.material3.demo.components.actions.Buttons
 import opensavvy.material3.demo.components.actions.Chips
 import opensavvy.material3.demo.components.actions.FloatingActionButtons
@@ -12,27 +14,28 @@ import opensavvy.material3.demo.components.containment.Dividers
 import opensavvy.material3.demo.components.inputs.Fields
 import opensavvy.material3.demo.components.selection.Checkboxes
 import opensavvy.material3.demo.components.selection.Switches
-import opensavvy.material3.demo.utils.SchemeSelector
+import opensavvy.material3.demo.utils.PalettePreference
+import opensavvy.material3.demo.utils.PaletteSelector
 import opensavvy.material3.html.communication.snackbar.SnackbarHost
-import opensavvy.material3.theme.ColorScheme
-import opensavvy.material3.theme.InstallColorScheme
+import opensavvy.material3.theme.InstallDynamicScheme
 import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.renderComposable
 
 fun main() {
 	renderComposable(rootElementId = "root") {
-		var scheme by remember { mutableStateOf(loadPreferredScheme()) }
-		LaunchedEffect(scheme) { savePreferredScheme(scheme) }
+		var palettePreference by remember { mutableStateOf(loadPreferences()) }
+		val palette = remember(palettePreference) { palettePreference.asPalette() }
+		LaunchedEffect(palettePreference) { savePreferences(palettePreference) }
 
-		InstallColorScheme(scheme) {
+		InstallDynamicScheme(palette.colors, palette.scheme) {
 			SnackbarHost {
 				H1 {
 					Text("Material3 for Compose HTML")
 				}
 
 				Intro()
-				SchemeSelector(scheme, onSelect = { scheme = it })
+				PaletteSelector(palette, onSelect = { palettePreference = it })
 				Buttons()
 				FloatingActionButtons()
 				Chips()
@@ -48,11 +51,16 @@ fun main() {
 	}
 }
 
-private fun loadPreferredScheme() =
+private fun loadPreferences(): PalettePreference =
 	localStorage.getItem("scheme")
-		?.let { loaded -> ColorScheme.entries.firstOrNull { it.name == loaded} }
-		?: ColorScheme.System
+		?.let { loaded ->
+			try {
+				Json.decodeFromString<PalettePreference>(loaded)
+			} catch (e: Exception) {
+				null
+			}
+		} ?: PalettePreference.Default
 
-private fun savePreferredScheme(scheme: ColorScheme) {
-	localStorage.setItem("scheme", scheme.name)
+private fun savePreferences(palette: PalettePreference) {
+	localStorage.setItem("scheme", Json.encodeToString(palette))
 }
