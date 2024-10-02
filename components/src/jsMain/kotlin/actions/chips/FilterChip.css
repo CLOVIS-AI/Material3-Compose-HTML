@@ -1,3 +1,45 @@
 .mdk-chip-filter {
-	background-color: darkcyan;
+	&:not(:disabled) {
+		color: var(--mdk-surface-variant-on);
+		border-color: var(--mdk-outline-variant);
+
+		& .mdk-chip-leading {
+			color: var(--mdk-primary);
+		}
+
+		&:hover {
+			background-color: color-mix(in srgb, var(--mdk-surface-variant-on) var(--mdk-state-hover-opacity), transparent);
+		}
+
+		&:focus {
+			background-color: color-mix(in srgb, var(--mdk-surface-variant-on) var(--mdk-state-focus-opacity), transparent);
+		}
+	}
+
+	&:disabled {
+		color: color-mix(in srgb, var(--mdk-surface-on) 38%, transparent);
+		border-color: color-mix(in srgb, var(--mdk-surface-on) 12%, transparent);
+	}
+
+	&:not(:disabled).mdk-chip-filter-active {
+		color: var(--mdk-secondary-cont-on);
+		border-color: var(--mdk-secondary-cont);
+		background-color: var(--mdk-secondary-cont);
+
+		& .mdk-chip-leading {
+			color: var(--mdk-secondary-cont-on);
+		}
+
+		&:hover {
+			background-color: color-mix(in srgb, var(--mdk-secondary-cont-on) var(--mdk-state-hover-opacity), var(--mdk-secondary-cont));
+		}
+
+		&:focus {
+			background-color: color-mix(in srgb, var(--mdk-surface-variant-on) var(--mdk-state-focus-opacity), var(--mdk-secondary-cont));
+		}
+	}
+
+	&:disabled.mdk-chip-filter-active {
+		background-color: color-mix(in srgb, var(--mdk-surface-on) 12%, transparent);
+	}
 }

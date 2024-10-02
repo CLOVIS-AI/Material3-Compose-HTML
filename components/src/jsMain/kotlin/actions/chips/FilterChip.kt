@@ -3,12 +3,9 @@ package opensavvy.material3.html.actions.chips
 import androidx.compose.runtime.Composable
 import opensavvy.material3.html.ExperimentalComponent
 import opensavvy.material3.html.UnfinishedComponent
-import opensavvy.material3.html.communication.progress.CircularProgressIndicator
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope
-import org.jetbrains.compose.web.attributes.disabled
-import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLButtonElement
 
@@ -58,19 +55,22 @@ fun FilterChip(
 	progress: Progress = done(),
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
-	Button({
-		this.onClick { onToggle(!active) }
+	AbstractChip(
+		enabled = enabled,
+		progress = progress,
+		leading = {
+			if (active)
+				Text("✓") // TODO: replace by 'done' icon
+		},
+		main = { Text(label) },
+		attrs = {
+			classes("mdk-chip-filter")
 
-		if (!enabled)
-			this.disabled()
+			if (active)
+				classes("mdk-chip-filter-active")
 
-		classes("mdk-chip-filter")
-
-		attrs()
-	}) {
-		if (progress is Progress.Loading)
-			CircularProgressIndicator(progress)
-
-		Text(label)
-	}
+			onClick { onToggle(!active) }
+			attrs()
+		}
+	)
 }

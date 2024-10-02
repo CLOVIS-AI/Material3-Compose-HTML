@@ -9,6 +9,16 @@
 	transition-property: width, border-color, background-color, color;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
+
+	border-color: var(--mdk-outline-variant);
+	border-radius: var(--mdk-corner-small);
+	border-width: 1px;
+	border-style: solid;
+
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+	background-color: transparent;
 }
 
 .mdk-chip-leading, .mdk-chip-trailing {
