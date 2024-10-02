@@ -3,6 +3,7 @@ plugins {
 	alias(opensavvyConventions.plugins.kotlin.application)
 	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
 	alias(opensavvyConventions.plugins.aligned.composeCompiler)
+	alias(opensavvyConventions.plugins.aligned.kotlinx.serialization)
 
 	alias(libs.plugins.vite)
 	alias(libs.plugins.resources.consumer)
@@ -24,6 +25,7 @@ kotlin {
 		dependencies {
 			implementation(projects.components)
 			implementation(projects.themeDynamic)
+			implementation(libs.kotlinx.serialization)
 		}
 	}
 }
