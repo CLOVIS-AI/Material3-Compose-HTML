@@ -1,3 +1,30 @@
 .mdk-chip-input {
-	background-color: darkgreen;
+	color: var(--mdk-surface-variant-on);
+}
+
+.mdk-chip-input:not(:disabled) {
+	&:hover {
+		& .mdk-chip-leading {
+			color: var(--mdk-primary);
+		}
+
+		background-color: color-mix(in srgb, var(--mdk-surface-on) var(--mdk-state-hover-opacity), transparent);
+	}
+
+	&:focus {
+		& .mdk-chip-leading {
+			color: var(--mdk-primary);
+		}
+
+		background-color: color-mix(in srgb, var(--mdk-secondary) var(--mdk-state-focus-opacity), transparent);
+	}
+}
+
+.mdk-chip-trailing:hover, .mdk-chip-trailing:focus {
+	color: var(--mdk-primary);
+}
+
+.mdk-chip-input:disabled {
+	color: color-mix(in srgb, var(--mdk-surface-on) 38%, transparent);
+	border-color: color-mix(in srgb, var(--mdk-surface-on) 12%, var(--mdk-outline-variant));
 }
