@@ -3,12 +3,10 @@ package opensavvy.material3.html.actions.chips
 import androidx.compose.runtime.Composable
 import opensavvy.material3.html.ExperimentalComponent
 import opensavvy.material3.html.UnfinishedComponent
-import opensavvy.material3.html.communication.progress.CircularProgressIndicator
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope
-import org.jetbrains.compose.web.attributes.disabled
-import org.jetbrains.compose.web.dom.Button
+import org.jetbrains.compose.web.dom.Span
 import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLButtonElement
 
@@ -60,21 +58,22 @@ fun InputChip(
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
-	Button({
-		this.onClick { onClick() }
-
-		if (!enabled)
-			this.disabled()
-
-		classes("mdk-chip-input")
-
-		attrs()
-	}) {
-		if (progress is Progress.Loading)
-			CircularProgressIndicator(progress)
-		else if (icon != null)
-			icon()
-
-		Text(label)
-	}
+	AbstractChip(
+		enabled = enabled,
+		progress = progress,
+		leading = { icon?.invoke() },
+		trailing = {
+			Span({ // TODO: Bad for accessibility, fix after #13
+				onClick { onRemove() }
+			}) {
+				Text("×")
+			}
+		},
+		main = { Text(label) },
+		attrs = {
+			classes("mdk-chip-input")
+			onClick { onClick() }
+			attrs()
+		}
+	)
 }

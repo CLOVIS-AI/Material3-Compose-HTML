@@ -9,6 +9,7 @@ import opensavvy.material3.demo.utils.progress
 import opensavvy.material3.demo.utils.rememberParameters
 import opensavvy.material3.html.actions.chips.*
 import opensavvy.material3.html.communication.snackbar.rememberSnackbarCreator
+import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun Chips() = Section("Chips") {
@@ -44,10 +45,11 @@ fun Chips() = Section("Chips") {
 				onRemove = {
 					scope.launch {
 						inputVisible = false
-						delay(1000)
+						delay(5000)
 						inputVisible = true
 					}
 				},
+				icon = { Text("&") },
 				enabled = parameters.named("Enabled", true),
 				contrasted = parameters.named("Contrasted", false),
 				progress = parameters.progress(),
