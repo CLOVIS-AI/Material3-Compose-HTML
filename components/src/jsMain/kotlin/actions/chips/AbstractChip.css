@@ -22,5 +22,20 @@
 }
 
 .mdk-chip-leading, .mdk-chip-trailing {
-	min-width: .25em;
+	position: relative;
+	width: .7em;
+
+	transition-property: width, color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+
+	&.mdk-chip-absent {
+		width: .25em;
+		color: transparent;
+	}
+
+	& .mdk-chip-slot {
+		position: absolute;
+		top: 0;
+	}
 }

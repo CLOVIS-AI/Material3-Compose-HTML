@@ -58,10 +58,8 @@ fun FilterChip(
 	AbstractChip(
 		enabled = enabled,
 		progress = progress,
-		leading = {
-			if (active)
-				Text("✓") // TODO: replace by 'done' icon
-		},
+		// TODO: replace by 'done' icon
+		leading = if (active) { { Text("✓") } } else null,
 		main = { Text(label) },
 		attrs = {
 			classes("mdk-chip-filter")

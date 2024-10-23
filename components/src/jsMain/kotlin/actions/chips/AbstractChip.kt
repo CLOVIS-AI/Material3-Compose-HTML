@@ -18,8 +18,8 @@ import org.w3c.dom.HTMLButtonElement
 internal fun AbstractChip(
 	enabled: Boolean,
 	progress: Progress = done(),
-	leading: @Composable () -> Unit = {},
-	trailing: @Composable () -> Unit = {},
+	leading: (@Composable () -> Unit)? = null,
+	trailing: (@Composable () -> Unit)? = null,
 	main: @Composable () -> Unit,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
@@ -33,11 +33,18 @@ internal fun AbstractChip(
 	}) {
 		Div({
 			classes("mdk-chip-leading")
+
+			if (leading == null)
+				classes("mdk-chip-absent")
 		}) {
-			if (progress != done())
-				CircularProgressIndicator(progress)
-			else
-				leading()
+			Div({
+				classes("mdk-chip-slot")
+			}) {
+				if (progress != done())
+					CircularProgressIndicator(progress)
+				else
+					leading?.invoke()
+			}
 		}
 
 		Div({
@@ -48,8 +55,15 @@ internal fun AbstractChip(
 
 		Div({
 			classes("mdk-chip-trailing")
+
+			if (trailing == null)
+				classes("mdk-chip-absent")
 		}) {
-			trailing()
+			Div({
+				classes("mdk-chip-slot")
+			}) {
+				trailing?.invoke()
+			}
 		}
 	}
 }

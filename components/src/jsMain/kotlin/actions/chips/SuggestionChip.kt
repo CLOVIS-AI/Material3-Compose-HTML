@@ -48,7 +48,7 @@ fun SuggestionChip(
 	AbstractChip(
 		enabled = enabled,
 		progress = progress,
-		leading = { icon?.invoke() },
+		leading = icon,
 		main = { Text(label) },
 		attrs = {
 			classes("mdk-chip-suggest")

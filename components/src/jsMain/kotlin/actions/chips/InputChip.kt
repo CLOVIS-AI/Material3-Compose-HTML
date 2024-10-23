@@ -61,7 +61,7 @@ fun InputChip(
 	AbstractChip(
 		enabled = enabled,
 		progress = progress,
-		leading = { icon?.invoke() },
+		leading = icon,
 		trailing = {
 			Span({ // TODO: Bad for accessibility, fix after #13
 				onClick { onRemove() }
