@@ -6,7 +6,7 @@
 	gap: .5em;
 	justify-content: space-evenly;
 
-	transition-property: width, border-color, background-color, color;
+	transition-property: width, border-color, background-color, color, box-shadow;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 
@@ -19,6 +19,14 @@
 	padding-bottom: .5em;
 
 	background-color: transparent;
+
+	&.mdk-chip-elevated {
+		border-width: 0;
+		margin: 1px;
+
+		box-shadow: 0 1px 3px 1px color-mix(in srgb, var(--mdk-shadow) 25%, transparent);
+		background-color: var(--mdk-surface);
+	}
 }
 
 .mdk-chip-leading, .mdk-chip-trailing {

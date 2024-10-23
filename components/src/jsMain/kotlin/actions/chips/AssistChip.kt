@@ -49,7 +49,7 @@ fun AssistChip(
 	label: String,
 	onClick: () -> Unit,
 	enabled: Boolean = true,
-	contrasted: Boolean = false,
+	elevated: Boolean = false,
 	progress: Progress = done(),
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
@@ -57,6 +57,7 @@ fun AssistChip(
 	AbstractChip(
 		enabled = enabled,
 		progress = progress,
+		elevated = elevated,
 		leading = icon,
 		main = { Text(label) },
 		attrs = {

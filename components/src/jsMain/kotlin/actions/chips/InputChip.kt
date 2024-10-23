@@ -53,7 +53,7 @@ fun InputChip(
 	onClick: () -> Unit,
 	onRemove: () -> Unit,
 	enabled: Boolean = true,
-	contrasted: Boolean = false,
+	elevated: Boolean = false,
 	progress: Progress = done(),
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
@@ -61,6 +61,7 @@ fun InputChip(
 	AbstractChip(
 		enabled = enabled,
 		progress = progress,
+		elevated = elevated,
 		leading = icon,
 		trailing = {
 			Span({ // TODO: Bad for accessibility, fix after #13

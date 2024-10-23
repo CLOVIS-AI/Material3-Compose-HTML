@@ -18,6 +18,7 @@ import org.w3c.dom.HTMLButtonElement
 internal fun AbstractChip(
 	enabled: Boolean,
 	progress: Progress = done(),
+	elevated: Boolean = false,
 	leading: (@Composable () -> Unit)? = null,
 	trailing: (@Composable () -> Unit)? = null,
 	main: @Composable () -> Unit,
@@ -28,6 +29,9 @@ internal fun AbstractChip(
 
 		if (!enabled)
 			disabled()
+
+		if (elevated)
+			classes("mdk-chip-elevated")
 
 		attrs()
 	}) {
