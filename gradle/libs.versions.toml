@@ -2,7 +2,7 @@
 
 [versions]
 serialization = "1.7.3"        # https://github.com/Kotlin/kotlinx.serialization/releases
-coroutines = "1.8.1"           # https://github.com/Kotlin/kotlinx.coroutines/releases
+coroutines = "1.9.0"           # https://github.com/Kotlin/kotlinx.coroutines/releases
 pedestal = "2.2.2"             # https://gitlab.com/opensavvy/pedestal/-/releases
 kotlin-vite = "0.4.0"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
 kotlin-js-resources = "0.3.0"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
