@@ -24,6 +24,7 @@ dependencies {
 	// List the 'library' projects
 	dokkatoo(projects.components)
 	dokkatoo(projects.theme)
+	dokkatoo(projects.themeDynamic)
 }
 
 // region Check the users of the project didn't forget to rename the group
