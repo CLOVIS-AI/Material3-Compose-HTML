@@ -3,12 +3,9 @@ package opensavvy.material3.html.actions.chips
 import androidx.compose.runtime.Composable
 import opensavvy.material3.html.ExperimentalComponent
 import opensavvy.material3.html.UnfinishedComponent
-import opensavvy.material3.html.communication.progress.CircularProgressIndicator
 import opensavvy.progress.Progress
 import opensavvy.progress.done
 import org.jetbrains.compose.web.attributes.AttrsScope
-import org.jetbrains.compose.web.attributes.disabled
-import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLButtonElement
 
@@ -43,26 +40,21 @@ fun SuggestionChip(
 	label: String,
 	onClick: () -> Unit,
 	enabled: Boolean = true,
-	contrasted: Boolean = false,
+	elevated: Boolean = false,
 	progress: Progress = done(),
 	icon: (@Composable () -> Unit)? = null,
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
-	Button({
-		this.onClick { onClick() }
-
-		if (!enabled)
-			this.disabled()
-
-		classes("mdk-chip-suggestion")
-
-		attrs()
-	}) {
-		if (progress is Progress.Loading)
-			CircularProgressIndicator(progress)
-		else if (icon != null)
-			icon()
-
-		Text(label)
-	}
+	AbstractChip(
+		enabled = enabled,
+		progress = progress,
+		elevated = elevated,
+		leading = icon,
+		main = { Text(label) },
+		attrs = {
+			classes("mdk-chip-suggest")
+			onClick { onClick() }
+			attrs()
+		}
+	)
 }

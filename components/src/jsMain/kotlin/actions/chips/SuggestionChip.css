@@ -1,3 +1,22 @@
-.mdk-chip-suggestion {
-	background-color: darkslateblue;
+.mdk-chip-suggest {
+	color: var(--mdk-surface-variant-on);
+}
+
+.mdk-chip-suggest:not(:disabled) {
+	& .mdk-chip-leading {
+		color: var(--mdk-primary);
+	}
+
+	&:hover {
+		background-color: color-mix(in srgb, var(--mdk-surface-variant-on) var(--mdk-state-hover-opacity), transparent);
+	}
+
+	&:focus {
+		background-color: color-mix(in srgb, var(--mdk-surface-variant-on) var(--mdk-state-focus-opacity), transparent);
+	}
+}
+
+.mdk-chip-suggest:disabled {
+	color: color-mix(in srgb, var(--mdk-surface-on) 38%, transparent);
+	border-color: color-mix(in srgb, var(--mdk-surface-on) 12% var(--mdk-outline-variant));
 }

@@ -25,7 +25,7 @@ fun Chips() = Section("Chips") {
 			"AssistChip",
 			onClick = { snackbarCreator.create("Clicked on the AssistChip!") },
 			enabled = parameters.named("Enabled", true),
-			contrasted = parameters.named("Contrasted", false),
+			elevated = parameters.named("Elevated", false),
 			progress = parameters.progress(),
 		)
 
@@ -34,7 +34,7 @@ fun Chips() = Section("Chips") {
 			filterActive,
 			onToggle = { filterActive = it },
 			enabled = parameters.named("Enabled", true),
-			contrasted = parameters.named("Contrasted", false),
+			elevated = parameters.named("Elevated", false),
 			progress = parameters.progress(),
 		)
 
@@ -51,7 +51,7 @@ fun Chips() = Section("Chips") {
 				},
 				icon = { Text("&") },
 				enabled = parameters.named("Enabled", true),
-				contrasted = parameters.named("Contrasted", false),
+				elevated = parameters.named("Elevated", false),
 				progress = parameters.progress(),
 			)
 		}
@@ -60,7 +60,7 @@ fun Chips() = Section("Chips") {
 			"SuggestionChip",
 			onClick = { snackbarCreator.create("Clicked on the SuggestionChip!") },
 			enabled = parameters.named("Enabled", true),
-			contrasted = parameters.named("Contrasted", false),
+			elevated = parameters.named("Elevated", false),
 			progress = parameters.progress(),
 		)
 	}

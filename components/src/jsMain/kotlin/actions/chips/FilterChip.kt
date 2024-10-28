@@ -51,17 +51,16 @@ fun FilterChip(
 	active: Boolean,
 	onToggle: (Boolean) -> Unit,
 	enabled: Boolean = true,
-	contrasted: Boolean = false,
+	elevated: Boolean = false,
 	progress: Progress = done(),
 	attrs: AttrsScope<HTMLButtonElement>.() -> Unit = {},
 ) {
 	AbstractChip(
 		enabled = enabled,
 		progress = progress,
-		leading = {
-			if (active)
-				Text("✓") // TODO: replace by 'done' icon
-		},
+		elevated = elevated,
+		// TODO: replace by 'done' icon
+		leading = if (active) { { Text("✓") } } else null,
 		main = { Text(label) },
 		attrs = {
 			classes("mdk-chip-filter")
