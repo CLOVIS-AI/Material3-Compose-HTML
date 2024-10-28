@@ -29,7 +29,7 @@ fun InstallDynamicScheme(
 				}
 			}
 
-			val commonTones = listOf(0, 10, 20, 30, 40, 50, 60, 70, 80, 95, 99, 100)
+			val commonTones = listOf(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100)
 			tonesOf("--mdk-ref-primary", palette.primaryPalette, commonTones)
 			tonesOf("--mdk-ref-secondary", palette.secondaryPalette, commonTones)
 			tonesOf("--mdk-ref-tertiary", palette.tertiaryPalette, commonTones)
