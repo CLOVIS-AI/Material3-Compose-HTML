@@ -1,3 +1,17 @@
 .mdk-button-text {
-	background-color: darkred;
+	outline: none;
+	background-color: transparent;
+	color: var(--mdk-primary);
+}
+
+.mdk-button-text:disabled {
+	color: color-mix(in srgb, var(--mdk-surface-on) 38%, transparent);
+}
+
+.mdk-button-text:hover:not(:disabled) {
+	background-color: color-mix(in srgb, var(--mdk-primary) var(--mdk-state-hover-opacity), transparent);
+}
+
+.mdk-button-text:focus:not(:disabled) {
+	background-color: color-mix(in srgb, var(--mdk-secondary-cont-on) var(--mdk-state-hover-opacity), transparent);
 }
