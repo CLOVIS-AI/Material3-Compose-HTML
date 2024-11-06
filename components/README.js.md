@@ -1,8 +1,12 @@
 # Module Material3 Components
 
-Compose for HTML implementation of the Material3 components, using TailwindCSS.
+Compose for HTML implementation of the Material3 components.
 
 <a href="https://search.maven.org/search?q=dev.opensavvy.material3.html.components"><img src="https://img.shields.io/maven-central/v/dev.opensavvy.material3.html/components.svg?label=Maven%20Central"></a>
+<a href="https://opensavvy.dev/open-source/stability.html"><img src="https://badgen.net/static/Stability/alpha/purple"></a>
+<a href="https://javadoc.io/doc/dev.opensavvy.material3.html/components"><img src="https://badgen.net/static/Other%20versions/javadoc.io/blue"></a>
+
+Before using these components, you must configure the CSS variables used to define the theme. To do this, see the `theme` or `theme-dynamic` modules.
 
 # Package opensavvy.material3.tailwind
 
