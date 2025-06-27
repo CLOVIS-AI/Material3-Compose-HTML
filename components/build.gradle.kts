@@ -20,7 +20,7 @@ kotlin {
 			implementation(compose.html.svg)
 
 			api(libs.kotlinx.coroutines)
-			api(libs.pedestal.progress)
+			api(libsCommon.opensavvy.pedestal.progress)
 		}
 
 		resources.srcDir(file("src/jsMain/kotlin"))
