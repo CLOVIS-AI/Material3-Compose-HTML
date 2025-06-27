@@ -31,6 +31,6 @@ kotlin {
 }
 
 dependencies {
-	transitiveJsResources(projects.theme)
-	transitiveJsResources(projects.components)
+	jsConsumedResources(projects.theme)
+	jsConsumedResources(projects.components)
 }
