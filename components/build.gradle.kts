@@ -1,8 +1,8 @@
 plugins {
 	alias(opensavvyConventions.plugins.base)
 	alias(opensavvyConventions.plugins.kotlin.library)
-	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
-	alias(opensavvyConventions.plugins.aligned.composeCompiler)
+	alias(libsCommon.plugins.compose.multiplatform)
+	alias(libsCommon.plugins.compose.compiler)
 
 	alias(libs.plugins.resources.producer)
 }
@@ -20,7 +20,7 @@ kotlin {
 			implementation(compose.html.svg)
 
 			api(libs.kotlinx.coroutines)
-			api(libs.pedestal.progress)
+			api(libsCommon.opensavvy.pedestal.progress)
 		}
 
 		resources.srcDir(file("src/jsMain/kotlin"))

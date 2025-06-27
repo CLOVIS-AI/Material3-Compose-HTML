@@ -1,12 +1,15 @@
 # List of dependencies of the project
 
 [versions]
-serialization = "1.7.3"        # https://github.com/Kotlin/kotlinx.serialization/releases
-coroutines = "1.9.0"           # https://github.com/Kotlin/kotlinx.coroutines/releases
-pedestal = "2.3.0"             # https://gitlab.com/opensavvy/pedestal/-/releases
-kotlin-vite = "0.4.0"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
-kotlin-js-resources = "0.3.0"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
-material-colors = "0.3.0"      # https://gitlab.com/opensavvy/ui/material-you-algorithm/-/releases
+serialization = "1.8.1"        # https://github.com/Kotlin/kotlinx.serialization/releases
+
+coroutines = "1.10.2"          # https://github.com/Kotlin/kotlinx.coroutines/releases
+
+kotlin-vite = "0.5.2"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
+
+kotlin-js-resources = "0.4.0"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
+
+material-colors = "0.4.0"      # https://gitlab.com/opensavvy/ui/material-you-algorithm/-/releases
 
 [plugins]
 vite = { id = "dev.opensavvy.vite.kotlin", version.ref = "kotlin-vite" }
@@ -16,7 +19,6 @@ resources-consumer = { id = "dev.opensavvy.resources.consumer", version.ref = "k
 [libraries]
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-pedestal-progress = { module = "dev.opensavvy.pedestal:progress", version.ref = "pedestal" }
 material-colors = { module = "dev.opensavvy.material3.utilities:colors", version.ref = "material-colors" }
 
 [bundles]

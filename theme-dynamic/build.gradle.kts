@@ -1,8 +1,8 @@
 plugins {
 	alias(opensavvyConventions.plugins.base)
 	alias(opensavvyConventions.plugins.kotlin.library)
-	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
-	alias(opensavvyConventions.plugins.aligned.composeCompiler)
+	alias(libsCommon.plugins.compose.multiplatform)
+	alias(libsCommon.plugins.compose.compiler)
 }
 
 kotlin {

@@ -1,9 +1,9 @@
 plugins {
 	alias(opensavvyConventions.plugins.base)
 	alias(opensavvyConventions.plugins.kotlin.application)
-	alias(opensavvyConventions.plugins.aligned.composeMultiplatform)
-	alias(opensavvyConventions.plugins.aligned.composeCompiler)
-	alias(opensavvyConventions.plugins.aligned.kotlinx.serialization)
+	alias(libsCommon.plugins.compose.multiplatform)
+	alias(libsCommon.plugins.compose.compiler)
+	alias(libsCommon.plugins.kotlinx.serialization)
 
 	alias(libs.plugins.vite)
 	alias(libs.plugins.resources.consumer)
@@ -31,6 +31,6 @@ kotlin {
 }
 
 dependencies {
-	transitiveJsResources(projects.theme)
-	transitiveJsResources(projects.components)
+	jsConsumedResources(projects.theme)
+	jsConsumedResources(projects.components)
 }

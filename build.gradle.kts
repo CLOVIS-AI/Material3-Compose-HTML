@@ -16,15 +16,18 @@ plugins {
 
 	// Some plugins *must* be configured on the root project.
 	// In these cases, we explicitly tell Gradle not to apply them.
-	alias(opensavvyConventions.plugins.aligned.kotlin) apply false
-	alias(opensavvyConventions.plugins.aligned.composeMultiplatform) apply false
+	alias(libsCommon.plugins.kotlin) apply false
+	alias(libsCommon.plugins.kotlin.jvm) apply false
+	alias(libsCommon.plugins.kotest) apply false
+	alias(libsCommon.plugins.kotlinx.serialization) apply false
+	alias(libsCommon.plugins.kotlinx.powerAssert) apply false
 }
 
 dependencies {
 	// List the 'library' projects
-	dokkatoo(projects.components)
-	dokkatoo(projects.theme)
-	dokkatoo(projects.themeDynamic)
+	dokka(projects.components)
+	dokka(projects.theme)
+	dokka(projects.themeDynamic)
 }
 
 // region Check the users of the project didn't forget to rename the group

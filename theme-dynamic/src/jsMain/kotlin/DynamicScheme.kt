@@ -1,9 +1,9 @@
 package opensavvy.material3.theme
 
 import androidx.compose.runtime.Composable
+import opensavvy.material3.colors.argb.Argb
 import opensavvy.material3.colors.dynamiccolor.DynamicScheme
 import opensavvy.material3.colors.palettes.TonalPalette
-import opensavvy.material3.colors.utils.Argb
 import org.jetbrains.compose.web.dom.ContentBuilder
 import org.jetbrains.compose.web.dom.Div
 import org.w3c.dom.HTMLDivElement
