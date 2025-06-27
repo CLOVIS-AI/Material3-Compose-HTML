@@ -9,7 +9,7 @@ kotlin-vite = "0.5.2"          # https://gitlab.com/opensavvy/automation/kotlin-
 
 kotlin-js-resources = "0.4.0"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
 
-material-colors = "0.3.0"      # https://gitlab.com/opensavvy/ui/material-you-algorithm/-/releases
+material-colors = "0.4.0"      # https://gitlab.com/opensavvy/ui/material-you-algorithm/-/releases
 
 [plugins]
 vite = { id = "dev.opensavvy.vite.kotlin", version.ref = "kotlin-vite" }

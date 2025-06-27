@@ -2,10 +2,10 @@ package opensavvy.material3.demo.utils
 
 import androidx.compose.runtime.Composable
 import kotlinx.serialization.Serializable
+import opensavvy.material3.colors.argb.Argb
 import opensavvy.material3.colors.dynamiccolor.DynamicScheme
 import opensavvy.material3.colors.hct.Hct
 import opensavvy.material3.colors.scheme.*
-import opensavvy.material3.colors.utils.Argb
 import opensavvy.material3.html.actions.chips.ChipGroup
 import opensavvy.material3.html.actions.chips.FilterChip
 import opensavvy.material3.theme.ColorScheme
@@ -44,7 +44,7 @@ data class PalettePreference(
 	companion object {
 		val Default = PalettePreference(
 			paletteName = "Content",
-			mainRgb = Argb.fromRgb(154, 130, 219).argb,
+			mainRgb = Argb(154, 130, 219).argb,
 			mode = ColorScheme.System.name,
 			contrastLevel = 1.0,
 		)
@@ -84,7 +84,7 @@ fun PaletteSelector(
 			val green = it.value.slice(3..4).toInt(16)
 			val blue = it.value.slice(5..6).toInt(16)
 
-			onSelect(current.preference.copy(mainRgb = Argb.fromRgb(red, green, blue).argb))
+			onSelect(current.preference.copy(mainRgb = Argb(red, green, blue).argb))
 		}
 
 		style {
