@@ -7,7 +7,7 @@ coroutines = "1.10.2"          # https://github.com/Kotlin/kotlinx.coroutines/re
 
 kotlin-vite = "0.5.3"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
 
-kotlin-js-resources = "0.4.0"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
+kotlin-js-resources = "0.5.1"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
 
 material-colors = "0.4.0"      # https://gitlab.com/opensavvy/ui/material-you-algorithm/-/releases
 
