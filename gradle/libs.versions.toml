@@ -1,7 +1,7 @@
 # List of dependencies of the project
 
 [versions]
-serialization = "1.8.1"        # https://github.com/Kotlin/kotlinx.serialization/releases
+serialization = "1.9.0"        # https://github.com/Kotlin/kotlinx.serialization/releases
 
 coroutines = "1.10.2"          # https://github.com/Kotlin/kotlinx.coroutines/releases
 
