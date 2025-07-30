@@ -5,7 +5,7 @@ serialization = "1.9.0"        # https://github.com/Kotlin/kotlinx.serialization
 
 coroutines = "1.10.2"          # https://github.com/Kotlin/kotlinx.coroutines/releases
 
-kotlin-vite = "0.5.2"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
+kotlin-vite = "0.5.3"          # https://gitlab.com/opensavvy/automation/kotlin-vite/-/releases
 
 kotlin-js-resources = "0.4.0"  # https://gitlab.com/opensavvy/automation/kotlin-js-resources/-/releases
 
